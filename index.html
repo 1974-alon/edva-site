@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDVA Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="layout-shell">
+        <header class="header-component">
+            <div class="layout-container header-component__inner">
+                <a href="#" class="header-component__brand" data-route="home">
+                    <span class="header-component__dot"></span>
+                    <span>EDVA</span>
+                </a>
+                <nav class="header-component__nav">
+                    <a href="#hero" data-i18n="nav.home">בית</a>
+                    <a href="#about" data-i18n="nav.about">אודות</a>
+                    <a href="#partners" data-i18n="nav.partners">שותפים</a>
+                    <button class="ui-button" data-route="contact" data-i18n="nav.contactButton">צור קשר</button>
+                </nav>
+                <button class="ui-button header-component__lang" id="langBtn">אנגלית</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="page is-active" id="page-home">
+                <section class="hero-component component-section component-section--compact" id="hero">
+                    <div class="layout-container">
+                        <section class="hero-component__banner">
+                            <div class="hero-component__content">
+                                <div class="hero-component__eyebrow" data-i18n="hero.eyebrow">ייעוץ עצמאי</div>
+                                <h1 class="hero-component__title" data-i18n="hero.title">בהירות להחלטות בעלות ערך גבוה.
+                                </h1>
+                                <p class="hero-component__text" data-i18n="hero.text">קונספט לאתר השקעות יוקרתי
+                                    ומינימליסטי, שנבנה כדי לשדר אמינות, דיוק ואיכות מקצועית ברמה גבוהה.</p>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="component-section" id="about">
+                    <div class="layout-container">
+                        <div class="component-head">
+                            <h2 class="component-head__title" data-i18n="about.title">בנוי להרגיש חד, דיסקרטי ואמין.
+                            </h2>
+                            <p class="component-head__subtitle" data-i18n="about.text">הקונספט הזה מתמקד באיכות הצגה עוד
+                                לפני הכנסת תוכן אמיתי, עם סמכות שקטה, מרווחים מדויקים ואופי מערכתי.</p>
+                        </div>
+                        <div class="cards-component__grid">
+                            <article class="surface-card cards-component__item">
+                                <h3 data-i18n="about.card1Title">מיצוב אסטרטגי</h3>
+                                <p data-i18n="about.card1Text">מסגרת ויזואלית ברורה להצגת מומחיות, ערך ורלוונטיות שוק
+                                    בלי רעש מיותר.</p>
+                            </article>
+                            <article class="surface-card cards-component__item">
+                                <h3 data-i18n="about.card2Title">פשטות יוקרתית</h3>
+                                <p data-i18n="about.card2Text">בנוי באיפוק, כך שהטיפוגרפיה, המבנה וההיררכיה יוצרים רושם
+                                    איכותי.</p>
+                            </article>
+                            <article class="surface-card cards-component__item">
+                                <h3 data-i18n="about.card3Title">מוכן להתרחבות</h3>
+                                <p data-i18n="about.card3Text">המבנה מודולרי, כך שניתן יהיה בהמשך להעביר אותו ל-Angular
+                                    בלי לבנות מחדש את השפה הוויזואלית.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="component-section" id="partners">
+                    <div class="layout-container">
+                        <div class="component-head">
+                            <h2 class="component-head__title" data-i18n="partners.title">שותפים
+                                בעלי החברה</h2>
+                            <p class="component-head__subtitle" data-i18n="partners.text">כרגע מוצגים שני שותפים בלבד,
+                                עם מבנה שמאפשר להרחיב בקלות בהמשך בלי לשנות את הלוגיקה של האזור.</p>
+                        </div>
+                        <div class="partners-component__grid" id="partnersGrid"></div>
+                    </div>
+                </section>
+
+                <section class="component-section">
+                    <div class="layout-container">
+                        <div class="surface-card cta-component__box">
+                            <div>
+                                <h2 data-i18n="cta.title">בסיס נקי לאתר פרימיום.</h2>
+                                <p data-i18n="cta.text">כרגע עם טקסטים זמניים, ובהמשך עם תוכן אמיתי. השפה הוויזואלית כבר
+                                    מוכנה לאתר ייעוץ דו לשוני ומלוטש.</p>
+                            </div>
+                            <div><button class="ui-button ui-button--primary" data-route="contact"
+                                    data-i18n="cta.button">לפתיחת עמוד צור קשר</button></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="page" id="page-contact">
+                <section class="component-section component-section--compact">
+                    <div class="layout-container">
+                        <div class="component-head">
+                            <h2 class="component-head__title" data-i18n="contact.title">נתחיל משיחה ממוקדת.</h2>
+                            <p class="component-head__subtitle" data-i18n="contact.text">העמוד הזה מייצג את מסך יצירת
+                                הקשר הנפרד שביקשת, עם פרטי התקשרות וטופס יוקרתי ופשוט.</p>
+                        </div>
+                        <div class="contact-component__grid">
+                            <div class="contact-component__stack">
+                                <article class="surface-card contact-component__card">
+                                    <h3 data-i18n="contact.detailsTitle">פרטי התקשרות</h3>
+                                    <p data-i18n="contact.detailsText">הפרטים כאן הם תוכן זמני לצורך הדגמת המבנה, ובהמשך
+                                        יוחלפו במידע אמיתי.</p>
+                                </article>
+                                <article class="surface-card contact-component__card">
+                                    <h3 data-i18n="contact.emailTitle">אימייל</h3>
+                                    <p>hello@edva-demo.com</p>
+                                </article>
+                                <article class="surface-card contact-component__card">
+                                    <h3 data-i18n="contact.phoneTitle">טלפון</h3>
+                                    <p>+972 50 000 0000</p>
+                                </article>
+                                <article class="surface-card contact-component__card">
+                                    <h3 data-i18n="contact.locationTitle">מיקום</h3>
+                                    <p data-i18n="contact.locationText">ישראל, זמין לעבודה גלובלית</p>
+                                </article>
+                            </div>
+                            <form class="surface-card contact-component__form">
+                                <h3 data-i18n="contact.formTitle">שליחת פנייה</h3>
+                                <p data-i18n="contact.formText">הטופס כאן ויזואלי כרגע ומוכן בהמשך לחיבור לשרת או שירות
+                                    חיצוני.</p>
+                                <div class="contact-component__fields">
+                                    <div class="contact-field"><label for="name" data-i18n="contact.name">שם
+                                            מלא</label><input id="name" type="text" /></div>
+                                    <div class="contact-field"><label for="email"
+                                            data-i18n="contact.email">אימייל</label><input id="email" type="email" />
+                                    </div>
+                                    <div class="contact-field contact-field--full"><label for="company"
+                                            data-i18n="contact.company">חברה</label><input id="company" type="text" />
+                                    </div>
+                                    <div class="contact-field contact-field--full"><label for="message"
+                                            data-i18n="contact.message">איך נוכל לעזור?</label><textarea
+                                            id="message"></textarea></div>
+                                    <div class="contact-field contact-field--full"><button type="button"
+                                            class="ui-button ui-button--primary" data-i18n="contact.submit">שלח
+                                            פנייה</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="footer-component">
+            <div class="layout-container footer-component__inner">
+                <div data-i18n="footer.copy">EDVA, קונספט לאתר ייעוץ פרימיום</div>
+                <div class="footer-component__nav">
+                    <a href="#hero" data-route="home" data-i18n="footer.home">בית</a>
+                    <a href="#partners" data-route="home" data-i18n="footer.partners">שותפים</a>
+                    <a href="#" data-route="contact" data-i18n="footer.contact">צור קשר</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="partner-modal" id="partnerModal">
+        <div class="partner-modal__backdrop" data-close-modal></div>
+        <div class="surface-card partner-modal__box">
+            <button class="partner-modal__close ui-button" data-close-modal>✕</button>
+            <div class="partner-modal__content">
+                <div class="partner-modal__image"><span class="partner-modal__initials" id="modalInitials">אב</span>
+                </div>
+                <div class="partner-modal__role" id="modalRole"></div>
+                <h2 class="partner-modal__title" id="modalTitle"></h2>
+                <p class="partner-modal__text" id="modalText"></p>
+                <div class="partner-modal__meta" id="modalMeta"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
