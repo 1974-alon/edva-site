@@ -1,38 +1,35 @@
 const translations = {
     en: {
-      nav: { home: 'Home', about: 'About', process: 'Approach', partners: 'Partners', contactButton: 'Contact' },
+      skipNav: 'Skip to main content',
+      nav: {
+        home: 'Home', about: 'About', process: 'Approach', partners: 'Partners', contactButton: 'Contact',
+        ariaLabel: 'Main navigation', footerAriaLabel: 'Footer navigation'
+      },
+      modal: { close: 'Close partner profile' },
+      pageTitle: { home: 'EDVA — Independent Advisory', contact: 'EDVA — Contact' },
       hero: {
         eyebrow: 'Independent Advisory',
         title: 'Clarity for high value decisions.',
         text: 'A premium, minimal website concept for an investment focused brand, built to communicate trust, precision and executive level quality.',
         primary: 'Start a Conversation',
         secondary: 'View Our Approach',
-        stat1: 'Boutique quality',
-        stat2: 'Bilingual structure',
-        stat3: 'Mobile ready',
+        stat1: 'Boutique quality', stat2: 'Bilingual structure', stat3: 'Mobile ready',
         frameEyebrow: 'Premium layout system',
         frameText: 'Dark surfaces, high contrast typography, restrained motion and generous spacing, designed to project maturity and confidence.',
-        mini1Title: 'Refined',
-        mini1Text: 'Minimal visual language with sharp structure and premium pacing.',
-        mini2Title: 'Flexible',
-        mini2Text: 'Prepared for future content, imagery and multilingual expansion.'
+        mini1Title: 'Refined', mini1Text: 'Minimal visual language with sharp structure and premium pacing.',
+        mini2Title: 'Flexible', mini2Text: 'Prepared for future content, imagery and multilingual expansion.'
       },
       about: {
         title: 'Built to feel sharp, discreet and credible.',
         text: 'This concept focuses on presentation quality before real content is introduced, combining calm authority, disciplined spacing and a strong editorial feel.',
-        card1Title: 'Strategic positioning',
-        card1Text: 'A clear visual framework for presenting expertise, value and market relevance without visual noise.',
-        card2Title: 'Premium simplicity',
-        card2Text: 'Built with restraint, allowing typography, layout and hierarchy to create a high end impression.',
-        card3Title: 'Ready for growth',
-        card3Text: 'The structure is modular, so it can later move into Angular without rebuilding the visual system.'
+        card1Title: 'Strategic positioning', card1Text: 'A clear visual framework for presenting expertise, value and market relevance without visual noise.',
+        card2Title: 'Premium simplicity', card2Text: 'Built with restraint, allowing typography, layout and hierarchy to create a high end impression.',
+        card3Title: 'Ready for growth', card3Text: 'The structure is modular, so it can later move into Angular without rebuilding the visual system.'
       },
       partners: {
-        title: 'Partners\\nCompany Owners',
+        title: 'Partners\nCompany Owners',
         text: 'Two partner cards for now, with a structure that can easily expand later without changing the component logic.',
-        meta1: 'Founder profile',
-        meta2: 'Extended popup content',
-        meta3: 'Ready for future expansion'
+        meta1: 'Founder profile', meta2: 'Extended popup content', meta3: 'Ready for future expansion'
       },
       cta: {
         title: 'A clean foundation for a premium site.',
@@ -40,70 +37,58 @@ const translations = {
         button: 'Open Contact Page'
       },
       contact: {
-        title: 'Let’s start with a focused conversation.',
+        title: 'Let\u2019s start with a focused conversation.',
         text: 'This page represents the dedicated contact screen you requested, including contact details and a simple premium form layout.',
         detailsTitle: 'Contact details',
         detailsText: 'These details are placeholder content for layout demonstration and will be replaced later with real information.',
-        emailTitle: 'Email',
-        phoneTitle: 'Phone',
-        locationTitle: 'Location',
-        locationText: 'Israel, available globally',
+        emailTitle: 'Email', phoneTitle: 'Phone', locationTitle: 'Location', locationText: 'Israel, available globally',
         formTitle: 'Send an inquiry',
         formText: 'The form here is visual for now and ready for future connection to a real backend or service.',
-        name: 'Full name',
-        email: 'Email address',
-        company: 'Company',
-        message: 'How can we help?',
-        submit: 'Send inquiry'
+        name: 'Full name', email: 'Email address', company: 'Company', message: 'How can we help?',
+        submit: 'Send inquiry',
+        successMsg: 'Thank you! Your inquiry was received. We will be in touch soon.',
+        errorName: 'Full name is required', errorEmail: 'A valid email address is required', errorMessage: 'Message is required'
       },
       footer: { copy: 'EDVA, premium advisory site concept', home: 'Home', partners: 'Partners', contact: 'Contact' }
     },
     he: {
-      nav: { home: 'בית', about: 'אודות', process: 'גישה', partners: 'שותפים', contactButton: 'צור קשר' },
+      skipNav: 'דלג לתוכן הראשי',
+      nav: {
+        home: 'בית', about: 'אודות', process: 'גישה', partners: 'שותפים', contactButton: 'צור קשר',
+        ariaLabel: 'ניווט ראשי', footerAriaLabel: 'ניווט תחתון'
+      },
+      modal: { close: 'סגור פרופיל שותף' },
+      pageTitle: { home: 'EDVA — ייעוץ עצמאי', contact: 'EDVA — צור קשר' },
       hero: {
         eyebrow: 'ייעוץ עצמאי',
         title: 'בהירות להחלטות בעלות ערך גבוה.',
         text: 'קונספט לאתר השקעות יוקרתי ומינימליסטי, שנבנה כדי לשדר אמינות, דיוק ואיכות מקצועית ברמה גבוהה.',
-        primary: 'בואו נדבר',
-        secondary: 'לצפייה בגישה שלנו',
-        stat1: 'איכות בוטיקית',
-        stat2: 'מבנה דו לשוני',
-        stat3: 'מוכן למובייל',
+        primary: 'בואו נדבר', secondary: 'לצפייה בגישה שלנו',
+        stat1: 'איכות בוטיקית', stat2: 'מבנה דו לשוני', stat3: 'מוכן למובייל',
         frameEyebrow: 'שפת פרימיום',
         frameText: 'משטחים כהים, טיפוגרפיה חדה, אנימציה מעודנת ומרווחים נדיבים, כדי לשדר בשלות וביטחון.',
-        mini1Title: 'מדויק',
-        mini1Text: 'שפה ויזואלית נקייה עם מבנה חד וקצב יוקרתי.',
-        mini2Title: 'גמיש',
-        mini2Text: 'מוכן לתוכן אמיתי, תמונות והתרחבות עתידית בעברית ואנגלית.'
+        mini1Title: 'מדויק', mini1Text: 'שפה ויזואלית נקייה עם מבנה חד וקצב יוקרתי.',
+        mini2Title: 'גמיש', mini2Text: 'מוכן לתוכן אמיתי, תמונות והתרחבות עתידית בעברית ואנגלית.'
       },
       about: {
         title: 'בנוי להרגיש חד, דיסקרטי ואמין.',
         text: 'הקונספט הזה מתמקד באיכות הצגה עוד לפני הכנסת תוכן אמיתי, עם סמכות שקטה, מרווחים מדויקים ואופי מערכתי.',
-        card1Title: 'מיצוב אסטרטגי',
-        card1Text: 'מסגרת ויזואלית ברורה להצגת מומחיות, ערך ורלוונטיות שוק בלי רעש מיותר.',
-        card2Title: 'פשטות יוקרתית',
-        card2Text: 'בנוי באיפוק, כך שהטיפוגרפיה, המבנה וההיררכיה יוצרים רושם איכותי.',
-        card3Title: 'מוכן להתרחבות',
-        card3Text: 'המבנה מודולרי, כך שניתן יהיה בהמשך להעביר אותו ל-Angular בלי לבנות מחדש את השפה הוויזואלית.'
+        card1Title: 'מיצוב אסטרטגי', card1Text: 'מסגרת ויזואלית ברורה להצגת מומחיות, ערך ורלוונטיות שוק בלי רעש מיותר.',
+        card2Title: 'פשטות יוקרתית', card2Text: 'בנוי באיפוק, כך שהטיפוגרפיה, המבנה וההיררכיה יוצרים רושם איכותי.',
+        card3Title: 'מוכן להתרחבות', card3Text: 'המבנה מודולרי, כך שניתן יהיה בהמשך להעביר אותו ל-Angular בלי לבנות מחדש את השפה הוויזואלית.'
       },
       process: {
         title: 'שפת תהליך נקייה, מוצגת בביטחון.',
         text: 'בהשראת אתרי ייעוץ איכותיים, המבנה כאן משתמש בסקשנים מסודרים ובאינטראקציה רגועה כדי לתמוך באמון ובהירות.',
-        step1Title: 'היכרות',
-        step1Text: 'אזור פתיחה למסר מרכזי, הצעת ערך וטון מותג.',
-        step2Title: 'מבנה',
-        step2Text: 'זרימת one page עם סדר מכוון, כותרות גדולות וקצב ויזואלי מדויק.',
-        step3Title: 'הנהלה',
-        step3Text: 'כרטיסי שותפים שנפתחים לפופאפים ממוקדים, בדיוק לפי הדרישה שלך.',
-        step4Title: 'יצירת קשר',
-        step4Text: 'עמוד נפרד עם טופס ופרטי התקשרות, מוכן בהמשך לחיבור אמיתי.'
+        step1Title: 'היכרות', step1Text: 'אזור פתיחה למסר מרכזי, הצעת ערך וטון מותג.',
+        step2Title: 'מבנה', step2Text: 'זרימת one page עם סדר מכוון, כותרות גדולות וקצב ויזואלי מדויק.',
+        step3Title: 'הנהלה', step3Text: 'כרטיסי שותפים שנפתחים לפופאפים ממוקדים, בדיוק לפי הדרישה שלך.',
+        step4Title: 'יצירת קשר', step4Text: 'עמוד נפרד עם טופס ופרטי התקשרות, מוכן בהמשך לחיבור אמיתי.'
       },
       partners: {
-        title: 'שותפים\\nבעלי החברה',
-        text: 'כרגע מוצגים שני שותפים בלבד, עם מבנה שמאפשר להרחיב בקלות בהמשך בלי לשנות את הלոգיקה של האזור.',
-        meta1: 'פרופיל מייסד',
-        meta2: 'תוכן מורחב בפופאפ',
-        meta3: 'מוכן להתרחבות בהמשך'
+        title: 'שותפים\nבעלי החברה',
+        text: 'כרגע מוצגים שני שותפים בלבד, עם מבנה שמאפשר להרחיב בקלות בהמשך בלי לשנות את הלוגיקה של האזור.',
+        meta1: 'פרופיל מייסד', meta2: 'תוכן מורחב בפופאפ', meta3: 'מוכן להתרחבות בהמשך'
       },
       cta: {
         title: 'בסיס נקי לאתר פרימיום.',
@@ -115,17 +100,13 @@ const translations = {
         text: 'העמוד הזה מייצג את מסך יצירת הקשר הנפרד שביקשת, עם פרטי התקשרות וטופס יוקרתי ופשוט.',
         detailsTitle: 'פרטי התקשרות',
         detailsText: 'הפרטים כאן הם תוכן זמני לצורך הדגמת המבנה, ובהמשך יוחלפו במידע אמיתי.',
-        emailTitle: 'אימייל',
-        phoneTitle: 'טלפון',
-        locationTitle: 'מיקום',
-        locationText: 'ישראל, זמין לעבודה גלובלית',
+        emailTitle: 'אימייל', phoneTitle: 'טלפון', locationTitle: 'מיקום', locationText: 'ישראל, זמין לעבודה גלובלית',
         formTitle: 'שליחת פנייה',
         formText: 'הטופס כאן ויזואלי כרגע ומוכן בהמשך לחיבור לשרת או שירות חיצוני.',
-        name: 'שם מלא',
-        email: 'אימייל',
-        company: 'חברה',
-        message: 'איך נוכל לעזור?',
-        submit: 'שלח פנייה'
+        name: 'שם מלא', email: 'אימייל', company: 'חברה', message: 'איך נוכל לעזור?',
+        submit: 'שלח פנייה',
+        successMsg: 'תודה! פנייתך התקבלה. נחזור אליך בהקדם.',
+        errorName: 'שם מלא נדרש', errorEmail: 'כתובת אימייל תקינה נדרשת', errorMessage: 'הודעה נדרשת'
       },
       footer: { copy: 'EDVA, קונספט לאתר ייעוץ פרימיום', home: 'בית', partners: 'שותפים', contact: 'צור קשר' }
     }
@@ -142,6 +123,8 @@ const translations = {
     ]
   };
 
+  const FORM_FIELD_IDS = ['name', 'email', 'message'];
+
   const appState = { lang: 'he', page: 'home' };
   const root = document.documentElement;
   const langBtn = document.getElementById('langBtn');
@@ -151,11 +134,21 @@ const translations = {
     contact: document.getElementById('page-contact')
   };
   const modal = document.getElementById('partnerModal');
+  const closeBtn = modal.querySelector('.partner-modal__close');
   const modalRole = document.getElementById('modalRole');
   const modalTitle = document.getElementById('modalTitle');
   const modalText = document.getElementById('modalText');
   const modalMeta = document.getElementById('modalMeta');
   const modalInitials = document.getElementById('modalInitials');
+  const headerNav = document.querySelector('.header-component__nav');
+  const footerNav = document.querySelector('.footer-component__nav');
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  const nameEl = document.getElementById('name');
+  const emailEl = document.getElementById('email');
+  const messageEl = document.getElementById('message');
+
+  let _lastFocused = null;
 
   function tr(path) {
     return path.split('.').reduce((acc, key) => acc && acc[key], translations[appState.lang]);
@@ -165,30 +158,56 @@ const translations = {
     root.lang = appState.lang;
     root.dir = appState.lang === 'he' ? 'rtl' : 'ltr';
     langBtn.textContent = appState.lang === 'he' ? 'אנגלית' : 'HEBREW';
+    langBtn.setAttribute('aria-label', appState.lang === 'he' ? 'Switch to English' : 'עבור לעברית');
+    closeBtn.setAttribute('aria-label', tr('modal.close'));
+    headerNav.setAttribute('aria-label', tr('nav.ariaLabel'));
+    footerNav.setAttribute('aria-label', tr('nav.footerAriaLabel'));
 
     document.querySelectorAll('[data-i18n]').forEach((node) => {
       const value = tr(node.getAttribute('data-i18n'));
       if (typeof value === 'string') {
         node.textContent = value;
-        node.style.whiteSpace = value.includes('\\n') ? 'pre-line' : '';
+        node.style.whiteSpace = value.includes('\n') ? 'pre-line' : '';
       }
     });
   }
 
   function renderPartners() {
     const data = partnersData[appState.lang];
-    partnersGrid.innerHTML = data.map((partner, index) => `
-      <article class="surface-card partner-card" data-partner="${index}">
-        <div>
-          <h3 class="partner-card__name">${partner.name}</h3>
-          <div class="partner-card__role">${partner.role}</div>
-          <p class="partner-card__desc">${partner.excerpt}</p>
-        </div>
-        <div class="partner-card__image">
-          <span class="partner-card__initials">${partner.initials}</span>
-        </div>
-      </article>
-    `).join('');
+    partnersGrid.innerHTML = '';
+    data.forEach((partner, index) => {
+      const article = document.createElement('article');
+      article.className = 'surface-card partner-card';
+      article.setAttribute('data-partner', index);
+      article.setAttribute('tabindex', '0');
+      article.setAttribute('role', 'button');
+      article.setAttribute('aria-label', partner.name);
+
+      const infoDiv = document.createElement('div');
+      const nameHeading = document.createElement('h3');
+      nameHeading.className = 'partner-card__name';
+      nameHeading.textContent = partner.name;
+      const roleEl = document.createElement('div');
+      roleEl.className = 'partner-card__role';
+      roleEl.textContent = partner.role;
+      const descEl = document.createElement('p');
+      descEl.className = 'partner-card__desc';
+      descEl.textContent = partner.excerpt;
+      infoDiv.appendChild(nameHeading);
+      infoDiv.appendChild(roleEl);
+      infoDiv.appendChild(descEl);
+
+      const imageDiv = document.createElement('div');
+      imageDiv.className = 'partner-card__image';
+      const initialsSpan = document.createElement('span');
+      initialsSpan.className = 'partner-card__initials';
+      initialsSpan.textContent = partner.initials;
+      imageDiv.appendChild(initialsSpan);
+
+      article.appendChild(infoDiv);
+      article.appendChild(imageDiv);
+      partnersGrid.appendChild(article);
+    });
   }
 
   function openPartner(index) {
@@ -198,22 +217,87 @@ const translations = {
     modalTitle.textContent = partner.name;
     modalText.textContent = partner.bio;
     modalInitials.textContent = partner.initials;
-    modalMeta.innerHTML = `<div>• ${labels.meta1}</div><div>• ${labels.meta2}</div><div>• ${labels.meta3}</div>`;
+
+    modalMeta.innerHTML = '';
+    [labels.meta1, labels.meta2, labels.meta3].forEach(label => {
+      const div = document.createElement('div');
+      div.textContent = `• ${label}`;
+      modalMeta.appendChild(div);
+    });
+
+    _lastFocused = document.activeElement;
     modal.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
+    setTimeout(() => closeBtn.focus(), 50);
   }
 
   function closePartner() {
     modal.classList.remove('is-open');
-    document.body.style.overflow = '';
+    document.body.classList.remove('modal-open');
+    if (_lastFocused) {
+      _lastFocused.focus();
+      _lastFocused = null;
+    }
   }
 
-  function setPage(page) {
+  function trapFocus(event) {
+    const focusable = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  function updateNavCurrent(page) {
+    document.querySelectorAll('[data-nav-page]').forEach(el => {
+      if (el.getAttribute('data-nav-page') === page) {
+        el.setAttribute('aria-current', 'page');
+      } else {
+        el.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function setPage(page, announce = false, scrollTarget = null) {
     appState.page = page;
     Object.entries(pages).forEach(([key, node]) => {
       node.classList.toggle('is-active', key === page);
     });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    updateNavCurrent(page);
+    document.title = tr(`pageTitle.${page}`) || document.title;
+
+    if (formStatus) {
+      formStatus.textContent = '';
+      formStatus.className = 'form-status';
+    }
+
+    if (scrollTarget) {
+      setTimeout(() => {
+        const el = document.getElementById(scrollTarget);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    if (announce && !scrollTarget) {
+      const heading = pages[page] && pages[page].querySelector('h1, h2');
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        setTimeout(() => {
+          heading.focus();
+          heading.removeAttribute('tabindex');
+        }, 150);
+      }
+    }
   }
 
   function attachRipple(target, event) {
@@ -229,35 +313,59 @@ const translations = {
     target.appendChild(circle);
   }
 
+  function clearFormInvalid() {
+    nameEl.removeAttribute('aria-invalid');
+    emailEl.removeAttribute('aria-invalid');
+    messageEl.removeAttribute('aria-invalid');
+  }
+
+  function validateForm() {
+    const t = translations[appState.lang].contact;
+    if (!nameEl.value.trim()) return { field: nameEl, msg: t.errorName };
+    if (!emailEl.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) return { field: emailEl, msg: t.errorEmail };
+    if (!messageEl.value.trim()) return { field: messageEl, msg: t.errorMessage };
+    return null;
+  }
+
   document.addEventListener('click', (event) => {
     const button = event.target.closest('.ui-button');
     const route = event.target.closest('[data-route]');
     const partnerCard = event.target.closest('[data-partner]');
     const closeTrigger = event.target.closest('[data-close-modal]');
 
-    if (button) {
-      attachRipple(button, event);
-    }
+    if (button) attachRipple(button, event);
 
     if (route) {
       event.preventDefault();
-      setPage(route.getAttribute('data-route'));
+      const targetPage = route.getAttribute('data-route');
+      const href = route.getAttribute('href') || '';
+      const anchor = href.startsWith('#') && href.length > 1 && href !== '#hero' ? href.slice(1) : null;
+      setPage(targetPage, true, anchor);
       return;
     }
 
-    if (partnerCard) {
+    if (partnerCard && !closeTrigger) {
       openPartner(Number(partnerCard.getAttribute('data-partner')));
       return;
     }
 
-    if (closeTrigger) {
-      closePartner();
-    }
+    if (closeTrigger) closePartner();
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
       closePartner();
+      return;
+    }
+
+    if (event.key === 'Tab' && modal.classList.contains('is-open')) {
+      trapFocus(event);
+      return;
+    }
+
+    if ((event.key === 'Enter' || event.key === ' ') && event.target.hasAttribute('data-partner')) {
+      event.preventDefault();
+      openPartner(Number(event.target.getAttribute('data-partner')));
     }
   });
 
@@ -265,7 +373,39 @@ const translations = {
     appState.lang = appState.lang === 'he' ? 'en' : 'he';
     applyTranslations();
     renderPartners();
+    if (formStatus) {
+      formStatus.textContent = '';
+      formStatus.className = 'form-status';
+    }
+    clearFormInvalid();
   });
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      clearFormInvalid();
+
+      const result = validateForm();
+      if (result) {
+        result.field.setAttribute('aria-invalid', 'true');
+        formStatus.className = 'form-status form-status--error';
+        formStatus.textContent = result.msg;
+        result.field.focus();
+        return;
+      }
+
+      const submitBtn = contactForm.querySelector('[type="submit"]');
+      submitBtn.disabled = true;
+      formStatus.className = 'form-status form-status--success';
+      formStatus.textContent = tr('contact.successMsg');
+      contactForm.reset();
+      setTimeout(() => { submitBtn.disabled = false; }, 4000);
+    });
+
+    [nameEl, emailEl, messageEl].forEach(el => {
+      el.addEventListener('input', () => el.removeAttribute('aria-invalid'));
+    });
+  }
 
   applyTranslations();
   renderPartners();

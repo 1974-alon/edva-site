@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDVA Demo</title>
+    <meta name="description" content="EDVA — ייעוץ עצמאי פרימיום. בהירות להחלטות בעלות ערך גבוה. Premium independent advisory for high-value decisions.">
+    <meta property="og:title" content="EDVA — Independent Advisory">
+    <meta property="og:description" content="Premium advisory concept. Built to communicate trust, precision and executive-level quality.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>EDVA — ייעוץ עצמאי</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <a href="#main-content" class="skip-nav" data-i18n="skipNav">דלג לתוכן הראשי</a>
 
     <div class="layout-shell"> 
         <header class="header-component">
@@ -17,17 +24,17 @@
                     <span class="header-component__dot"></span>
                     <span>EDVA</span>
                 </a>
-                <nav class="header-component__nav 111">
-                    <a href="#hero" data-i18n="nav.home">בית</a>
-                    <a href="#about" data-i18n="nav.about">אודות</a>
-                    <a href="#partners" data-i18n="nav.partners">שותפים</a>
-                    <button class="ui-button" data-route="contact" data-i18n="nav.contactButton">צור קשר</button>
+                <nav class="header-component__nav" aria-label="ניווט ראשי">
+                    <a href="#hero" data-i18n="nav.home" data-nav-page="home" data-route="home">בית</a>
+                    <a href="#about" data-i18n="nav.about" data-route="home">אודות</a>
+                    <a href="#partners" data-i18n="nav.partners" data-route="home">שותפים</a>
+                    <button class="ui-button" data-route="contact" data-i18n="nav.contactButton" data-nav-page="contact">צור קשר</button>
                 </nav>
                 <button class="ui-button header-component__lang" id="langBtn">אנגלית</button>
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
             <section class="page is-active" id="page-home">
                 <section class="hero-component component-section component-section--compact" id="hero">
                     <div class="layout-container">
@@ -126,23 +133,24 @@
                                     <p data-i18n="contact.locationText">ישראל, זמין לעבודה גלובלית</p>
                                 </article>
                             </div>
-                            <form class="surface-card contact-component__form">
+                            <form class="surface-card contact-component__form" id="contactForm" novalidate>
                                 <h3 data-i18n="contact.formTitle">שליחת פנייה</h3>
                                 <p data-i18n="contact.formText">הטופס כאן ויזואלי כרגע ומוכן בהמשך לחיבור לשרת או שירות
                                     חיצוני.</p>
                                 <div class="contact-component__fields">
                                     <div class="contact-field"><label for="name" data-i18n="contact.name">שם
-                                            מלא</label><input id="name" type="text" /></div>
+                                            מלא</label><input id="name" type="text" required aria-required="true" autocomplete="name" /></div>
                                     <div class="contact-field"><label for="email"
-                                            data-i18n="contact.email">אימייל</label><input id="email" type="email" />
+                                            data-i18n="contact.email">אימייל</label><input id="email" type="email" required aria-required="true" autocomplete="email" />
                                     </div>
                                     <div class="contact-field contact-field--full"><label for="company"
-                                            data-i18n="contact.company">חברה</label><input id="company" type="text" />
+                                            data-i18n="contact.company">חברה</label><input id="company" type="text" autocomplete="organization" />
                                     </div>
                                     <div class="contact-field contact-field--full"><label for="message"
                                             data-i18n="contact.message">איך נוכל לעזור?</label><textarea
-                                            id="message"></textarea></div>
-                                    <div class="contact-field contact-field--full"><button type="button"
+                                            id="message" required aria-required="true"></textarea></div>
+                                    <div class="contact-field contact-field--full" id="formStatus" role="alert" aria-live="polite"></div>
+                                    <div class="contact-field contact-field--full"><button type="submit"
                                             class="ui-button ui-button--primary" data-i18n="contact.submit">שלח
                                             פנייה</button></div>
                                 </div>
@@ -156,19 +164,19 @@
         <footer class="footer-component">
             <div class="layout-container footer-component__inner">
                 <div data-i18n="footer.copy">EDVA, קונספט לאתר ייעוץ פרימיום</div>
-                <div class="footer-component__nav">
-                    <a href="#hero" data-route="home" data-i18n="footer.home">בית</a>
+                <nav class="footer-component__nav" aria-label="ניווט תחתון">
+                    <a href="#hero" data-route="home" data-i18n="footer.home" data-nav-page="home">בית</a>
                     <a href="#partners" data-route="home" data-i18n="footer.partners">שותפים</a>
-                    <a href="#" data-route="contact" data-i18n="footer.contact">צור קשר</a>
-                </div>
+                    <a href="#" data-route="contact" data-i18n="footer.contact" data-nav-page="contact">צור קשר</a>
+                </nav>
             </div>
         </footer>
     </div>
 
-    <div class="partner-modal" id="partnerModal">
+    <div class="partner-modal" id="partnerModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalText">
         <div class="partner-modal__backdrop" data-close-modal></div>
         <div class="surface-card partner-modal__box">
-            <button class="partner-modal__close ui-button" data-close-modal>✕</button>
+            <button class="partner-modal__close ui-button" data-close-modal aria-label="סגור">✕</button>
             <div class="partner-modal__content">
                 <div class="partner-modal__image"><span class="partner-modal__initials" id="modalInitials">אב</span>
                 </div>
