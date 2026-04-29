@@ -9,7 +9,7 @@ const translations = {
       pageTitle: { home: 'EDVA — Independent Advisory', contact: 'EDVA — Contact' },
       hero: {
         eyebrow: 'Independent Advisory',
-        title: 'All the way to your exit.',
+        title: 'All the way to your exit',
         text: 'M&A and capital raising for technology companies and investors, from strategy to exit.',
         primary: 'Start a Conversation',
         secondary: 'View Our Approach',
@@ -20,17 +20,17 @@ const translations = {
         mini2Title: 'Flexible', mini2Text: 'Prepared for future content, imagery and multilingual expansion.'
       },
       valueProp: {
-        title: 'Advice is cheap. Closing isn’t.',
+        title: 'Advice is cheap. Closing isn’t',
         text: 'We advise and execute complex M&A transactions for technology companies, investors, and acquirers - staying hands-on through to exit.'
       },
       about: {
-        title: 'Numbers, not promises.',
+        title: 'Numbers, not promises',
         card1Value: '$300M+', card1Label: 'in transaction value',
         card2Value: '200+', card2Label: 'deals closed',
         card3Value: '15+', card3Label: 'years in the market'
       },
       services: {
-        title: 'Where we sit at the table.',
+        title: 'Where we sit at the table',
         item1: 'M&A advisory and execution across public and private markets',
         item2: 'Capital raising (private and public)',
         item3: 'IPOs and reverse mergers',
@@ -44,12 +44,12 @@ const translations = {
         meta1: 'Founder profile', meta2: 'Extended popup content', meta3: 'Ready for future expansion'
       },
       cta: {
-        title: 'A clean foundation for a premium site.',
+        title: 'A clean foundation for a premium site',
         text: 'Placeholder copy today, real content tomorrow. The visual system is already built to support a polished bilingual advisory website.',
         button: 'Open Contact Page'
       },
       contact: {
-        title: 'Let\u2019s start with a focused conversation.',
+        title: 'Let\u2019s start with a focused conversation',
         text: 'This page represents the dedicated contact screen you requested, including contact details and a simple premium form layout.',
         detailsTitle: 'Contact details',
         detailsText: 'These details are placeholder content for layout demonstration and will be replaced later with real information.',
@@ -73,7 +73,7 @@ const translations = {
       pageTitle: { home: 'EDVA — ייעוץ עצמאי', contact: 'EDVA — צור קשר' },
       hero: {
         eyebrow: 'ייעוץ עצמאי',
-        title: 'כל הדרך עד האקזיט שלך.',
+        title: 'כל הדרך עד האקזיט שלך',
         text: 'מיזוגים ורכישות וגיוס הון לחברות טכנולוגיה ומשקיעים, מאסטרטגיה ועד אקזיט.',
         primary: 'בואו נדבר', secondary: 'לצפייה בגישה שלנו',
         stat1: 'איכות בוטיקית', stat2: 'מבנה דו לשוני', stat3: 'מוכן למובייל',
@@ -83,17 +83,17 @@ const translations = {
         mini2Title: 'גמיש', mini2Text: 'מוכן לתוכן אמיתי, תמונות והתרחבות עתידית בעברית ואנגלית.'
       },
       valueProp: {
-        title: 'לייעץ זה קל, לסגור זה פחות.',
+        title: 'לייעץ זה קל, לסגור זה פחות',
         text: 'אנחנו מייעצים ומוציאים לפועל עסקאות M&A מורכבות לחברות טכנולוגיה, למשקיעים ולרוכשים, ונשארים שותפים אקטיביים עד האקזיט.'
       },
       about: {
-        title: 'מספרים, לא הבטחות.',
+        title: 'מספרים, לא הבטחות',
         card1Value: '$300M+', card1Label: 'בשווי עסקאות',
         card2Value: '200+', card2Label: 'עסקאות שנסגרו',
         card3Value: '15+', card3Label: 'שנות ניסיון בשוק'
       },
       process: {
-        title: 'שפת תהליך נקייה, מוצגת בביטחון.',
+        title: 'שפת תהליך נקייה, מוצגת בביטחון',
         text: 'בהשראת אתרי ייעוץ איכותיים, המבנה כאן משתמש בסקשנים מסודרים ובאינטראקציה רגועה כדי לתמוך באמון ובהירות.',
         step1Title: 'היכרות', step1Text: 'אזור פתיחה למסר מרכזי, הצעת ערך וטון מותג.',
         step2Title: 'מבנה', step2Text: 'זרימת one page עם סדר מכוון, כותרות גדולות וקצב ויזואלי מדויק.',
@@ -101,7 +101,7 @@ const translations = {
         step4Title: 'יצירת קשר', step4Text: 'עמוד נפרד עם טופס ופרטי התקשרות, מוכן בהמשך לחיבור אמיתי.'
       },
       services: {
-        title: 'הכיסא שלנו ליד השולחן.',
+        title: 'הכיסא שלנו ליד השולחן',
         item1: 'ייעוץ וביצוע M&A בשווקים פרטיים וציבוריים',
         item2: 'גיוס הון (פרטי וציבורי)',
         item3: 'הנפקות ומיזוגים הפוכים',
@@ -115,12 +115,12 @@ const translations = {
         meta1: 'פרופיל מייסד', meta2: 'תוכן מורחב בפופאפ', meta3: 'מוכן להתרחבות בהמשך'
       },
       cta: {
-        title: 'בסיס נקי לאתר פרימיום.',
+        title: 'בסיס נקי לאתר פרימיום',
         text: 'כרגע עם טקסטים זמניים, ובהמשך עם תוכן אמיתי. השפה הוויזואלית כבר מוכנה לאתר ייעוץ דו לשוני ומלוטש.',
         button: 'לפתיחת עמוד צור קשר'
       },
       contact: {
-        title: 'נתחיל משיחה ממוקדת.',
+        title: 'נתחיל משיחה ממוקדת',
         text: 'העמוד הזה מייצג את מסך יצירת הקשר הנפרד שביקשת, עם פרטי התקשרות וטופס יוקרתי ופשוט.',
         detailsTitle: 'פרטי התקשרות',
         detailsText: 'הפרטים כאן הם תוכן זמני לצורך הדגמת המבנה, ובהמשך יוחלפו במידע אמיתי.',
