@@ -304,7 +304,8 @@
     }
     .hero-component__grid, .cta-component__box, .contact-component__grid { grid-template-columns: 1fr; }
     .cards-component__grid { grid-template-columns: repeat(2,1fr); }
-          .partners-component__grid { grid-template-columns: 1fr; }
+    .partners-component__grid { grid-template-columns: 1fr; }
+    .services-component__box { padding: 32px; }
   }
 
   .skip-nav {
@@ -376,4 +377,10 @@
     .cards-component__grid, .contact-component__fields { grid-template-columns: 1fr; }
     .component-section { padding-top: 84px; }
     .footer-component__inner { flex-direction: column; align-items: flex-start; }
+    .component-head__title { font-weight: 700; letter-spacing: -0.025em; }
+    .stat-card__value { font-weight: 600; letter-spacing: -0.03em; }
+    .stat-card__label { font-size: 14px; }
+    .services-component__box { padding: 24px 20px; }
+    .services-component__title { font-weight: 700; letter-spacing: -0.025em; text-align: center; }
+    .services-component__list li { justify-content: center; font-size: 15px; padding: 8px 0; }
   }
