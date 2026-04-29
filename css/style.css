@@ -373,6 +373,7 @@
     .hero-component__banner {
       min-height: 420px;
       padding: 24px;
+      align-items: center;
     }
     .cards-component__grid, .contact-component__fields { grid-template-columns: 1fr; }
     .component-section { padding-top: 84px; }
