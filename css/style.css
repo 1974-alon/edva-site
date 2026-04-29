@@ -90,7 +90,16 @@
   }
 
   .ui-button:hover { transform: translateY(-1px); border-color: var(--line-strong); }
-  .ui-button--primary { background: linear-gradient(135deg, var(--accent), #f2dfb0); color: #131313; border-color: transparent; }
+  .ui-button--primary {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+  .ui-button--primary:hover {
+    border-color: var(--accent);
+    background: rgba(216,192,143,0.07);
+  }
   .ui-button__ripple {
     position: absolute; border-radius: 50%; transform: scale(0); background: rgba(255,255,255,0.28);
     animation: rippleAnim 0.7s linear; pointer-events: none; z-index: -1;
@@ -124,6 +133,8 @@
   .header-component__nav a:hover { color: var(--text); }
   .header-component__lang { grid-area: lang; justify-self: start; min-width: 108px; }
   html[dir="ltr"] .header-component__lang { justify-self: end; }
+  .header-component__lang, .header-component__nav .ui-button { min-height: 42px; }
+  .header-component__contact-mobile { display: none; }
 
   .hero-component {
     padding-top: 34px;
@@ -364,11 +375,13 @@
   }
 
   @media (max-width: 760px) {
-    .header-component__inner { grid-template-columns: 1fr auto; gap: 14px; grid-template-areas: "brand lang"; }
-    html[dir="rtl"] .header-component__inner, html[dir="ltr"] .header-component__inner { grid-template-areas: "brand lang"; }
+    .header-component__inner { grid-template-columns: 1fr auto auto; gap: 10px; grid-template-areas: "brand contact lang"; }
+    html[dir="rtl"] .header-component__inner, html[dir="ltr"] .header-component__inner { grid-template-areas: "brand contact lang"; }
     .header-component__brand { justify-self: start; }
-    .header-component__lang { justify-self: end; min-width: 96px; }
+    .header-component__lang { justify-self: end; min-width: 0; }
     .header-component__nav { display: none; }
+    .header-component__contact-mobile { display: inline-flex; grid-area: contact; }
+    .header-component__contact-mobile, .header-component__lang { min-height: 32px; padding: 0 13px; font-size: 13px; }
     .partner-card, .contact-component__card, .contact-component__form, .cta-component__box, .partner-modal__box, .hero-component__banner { border-radius: 22px; }
     .hero-component__banner {
       min-height: 420px;
