@@ -9,7 +9,7 @@ const translations = {
       pageTitle: { home: 'EDVA — Independent Advisory', contact: 'EDVA — Contact' },
       hero: {
         eyebrow: 'Independent Advisory',
-        title: 'Clarity for decisions that shape the future.',
+        title: 'All the way to your exit.',
         text: 'A premium, minimal website concept for an investment focused brand, built to communicate trust, precision and executive level quality.',
         primary: 'Start a Conversation',
         secondary: 'View Our Approach',
@@ -61,7 +61,7 @@ const translations = {
       pageTitle: { home: 'EDVA — ייעוץ עצמאי', contact: 'EDVA — צור קשר' },
       hero: {
         eyebrow: 'ייעוץ עצמאי',
-        title: 'בהירות להחלטות שמעצבות את העתיד.',
+        title: 'כל הדרך עד האקזיט שלך.',
         text: 'קונספט לאתר השקעות יוקרתי ומינימליסטי, שנבנה כדי לשדר אמינות, דיוק ואיכות מקצועית ברמה גבוהה.',
         primary: 'בואו נדבר', secondary: 'לצפייה בגישה שלנו',
         stat1: 'איכות בוטיקית', stat2: 'מבנה דו לשוני', stat3: 'מוכן למובייל',
