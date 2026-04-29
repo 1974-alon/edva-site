@@ -21,7 +21,7 @@ const translations = {
       },
       valueProp: {
         title: 'Advice is cheap. Closing isn’t.',
-        text: 'We advise and execute complex M&A transactions for technology companies, investors, and acquirers — staying hands-on through to exit.'
+        text: 'We advise and execute complex M&A transactions for technology companies, investors, and acquirers - staying hands-on through to exit.'
       },
       about: {
         title: 'Numbers, not promises.',
@@ -84,7 +84,7 @@ const translations = {
       },
       valueProp: {
         title: 'לייעץ זה קל, לסגור זה פחות.',
-        text: 'אנחנו מייעצים ומוציאים לפועל עסקאות M&A מורכבות לחברות טכנולוגיה, למשקיעים ולרוכשים — ונשארים שותפים אקטיביים עד האקזיט.'
+        text: 'אנחנו מייעצים ומוציאים לפועל עסקאות M&A מורכבות לחברות טכנולוגיה, למשקיעים ולרוכשים, ונשארים שותפים אקטיביים עד האקזיט.'
       },
       about: {
         title: 'מספרים, לא הבטחות.',

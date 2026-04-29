@@ -382,5 +382,5 @@
     .stat-card__label { font-size: 14px; }
     .services-component__box { padding: 24px 20px; }
     .services-component__title { font-weight: 700; letter-spacing: -0.025em; text-align: center; }
-    .services-component__list li { justify-content: center; font-size: 15px; padding: 8px 0; }
+    .services-component__list li { justify-content: center; text-align: center; font-size: 15px; padding: 8px 0; }
   }
