@@ -52,6 +52,7 @@
     margin: 0 auto 42px;
     text-align: center;
   }
+  .component-head--standalone { margin-bottom: 0; }
 
   .component-head__title {
     margin: 0;
@@ -186,6 +187,15 @@
   .cards-component__item, .process-component__item, .contact-component__card, .contact-component__form, .cta-component__box { padding: 24px; }
   .cards-component__item h3, .process-component__item h3, .contact-component__card h3, .contact-component__form h3 { margin: 0 0 14px; font-size: 22px; letter-spacing: -0.03em; }
   .cards-component__item p, .process-component__item p, .contact-component__card p, .contact-component__form p { margin: 0; color: var(--muted); line-height: 1.8; }
+  .cards-component__item { text-align: center; }
+  .stat-card__value { font-size: clamp(44px, 5vw, 60px); font-weight: 300; letter-spacing: -0.04em; line-height: 1; margin-bottom: 10px; }
+  .stat-card__label { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+
+  .services-component__box { padding: 40px 48px; }
+  .services-component__title { margin: 0 0 32px; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.04em; line-height: 1.1; text-align: center; }
+  .services-component__list { list-style: none; margin: 0; padding: 0; }
+  .services-component__list li { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 9px 0; font-size: 16px; color: var(--muted); line-height: 1.5; }
+  .services-component__list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
   .partners-component__grid { grid-template-columns: repeat(2,1fr); }
   .partner-card {

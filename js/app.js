@@ -10,7 +10,7 @@ const translations = {
       hero: {
         eyebrow: 'Independent Advisory',
         title: 'All the way to your exit.',
-        text: 'A premium, minimal website concept for an investment focused brand, built to communicate trust, precision and executive level quality.',
+        text: 'M&A and capital raising for technology companies and investors, from strategy to exit.',
         primary: 'Start a Conversation',
         secondary: 'View Our Approach',
         stat1: 'Boutique quality', stat2: 'Bilingual structure', stat3: 'Mobile ready',
@@ -19,12 +19,24 @@ const translations = {
         mini1Title: 'Refined', mini1Text: 'Minimal visual language with sharp structure and premium pacing.',
         mini2Title: 'Flexible', mini2Text: 'Prepared for future content, imagery and multilingual expansion.'
       },
+      valueProp: {
+        title: 'Advice is cheap. Closing isn’t.',
+        text: 'We advise and execute complex M&A transactions for technology companies, investors, and acquirers — staying hands-on through to exit.'
+      },
       about: {
-        title: 'Built to feel sharp, discreet and credible.',
-        text: 'This concept focuses on presentation quality before real content is introduced, combining calm authority, disciplined spacing and a strong editorial feel.',
-        card1Title: 'Strategic positioning', card1Text: 'A clear visual framework for presenting expertise, value and market relevance without visual noise.',
-        card2Title: 'Premium simplicity', card2Text: 'Built with restraint, allowing typography, layout and hierarchy to create a high end impression.',
-        card3Title: 'Ready for growth', card3Text: 'The structure is modular, so it can later move into Angular without rebuilding the visual system.'
+        title: 'Numbers, not promises.',
+        card1Value: '$300M+', card1Label: 'in transaction value',
+        card2Value: '200+', card2Label: 'deals closed',
+        card3Value: '15+', card3Label: 'years in the market'
+      },
+      services: {
+        title: 'Where we sit at the table.',
+        item1: 'M&A advisory and execution across public and private markets',
+        item2: 'Capital raising (private and public)',
+        item3: 'IPOs and reverse mergers',
+        item4: 'Investor and acquirer sourcing',
+        item5: 'Transaction preparation and advisory',
+        item6: 'Public company advisory'
       },
       partners: {
         title: 'Partners\nCompany Owners',
@@ -62,7 +74,7 @@ const translations = {
       hero: {
         eyebrow: 'ייעוץ עצמאי',
         title: 'כל הדרך עד האקזיט שלך.',
-        text: 'קונספט לאתר השקעות יוקרתי ומינימליסטי, שנבנה כדי לשדר אמינות, דיוק ואיכות מקצועית ברמה גבוהה.',
+        text: 'מיזוגים ורכישות וגיוס הון לחברות טכנולוגיה ומשקיעים, מאסטרטגיה ועד אקזיט.',
         primary: 'בואו נדבר', secondary: 'לצפייה בגישה שלנו',
         stat1: 'איכות בוטיקית', stat2: 'מבנה דו לשוני', stat3: 'מוכן למובייל',
         frameEyebrow: 'שפת פרימיום',
@@ -70,12 +82,15 @@ const translations = {
         mini1Title: 'מדויק', mini1Text: 'שפה ויזואלית נקייה עם מבנה חד וקצב יוקרתי.',
         mini2Title: 'גמיש', mini2Text: 'מוכן לתוכן אמיתי, תמונות והתרחבות עתידית בעברית ואנגלית.'
       },
+      valueProp: {
+        title: 'לייעץ זה קל, לסגור זה פחות.',
+        text: 'אנחנו מייעצים ומוציאים לפועל עסקאות M&A מורכבות לחברות טכנולוגיה, למשקיעים ולרוכשים — ונשארים שותפים אקטיביים עד האקזיט.'
+      },
       about: {
-        title: 'בנוי להרגיש חד, דיסקרטי ואמין.',
-        text: 'הקונספט הזה מתמקד באיכות הצגה עוד לפני הכנסת תוכן אמיתי, עם סמכות שקטה, מרווחים מדויקים ואופי מערכתי.',
-        card1Title: 'מיצוב אסטרטגי', card1Text: 'מסגרת ויזואלית ברורה להצגת מומחיות, ערך ורלוונטיות שוק בלי רעש מיותר.',
-        card2Title: 'פשטות יוקרתית', card2Text: 'בנוי באיפוק, כך שהטיפוגרפיה, המבנה וההיררכיה יוצרים רושם איכותי.',
-        card3Title: 'מוכן להתרחבות', card3Text: 'המבנה מודולרי, כך שניתן יהיה בהמשך להעביר אותו ל-Angular בלי לבנות מחדש את השפה הוויזואלית.'
+        title: 'מספרים, לא הבטחות.',
+        card1Value: '$300M+', card1Label: 'בשווי עסקאות',
+        card2Value: '200+', card2Label: 'עסקאות שנסגרו',
+        card3Value: '15+', card3Label: 'שנות ניסיון בשוק'
       },
       process: {
         title: 'שפת תהליך נקייה, מוצגת בביטחון.',
@@ -84,6 +99,15 @@ const translations = {
         step2Title: 'מבנה', step2Text: 'זרימת one page עם סדר מכוון, כותרות גדולות וקצב ויזואלי מדויק.',
         step3Title: 'הנהלה', step3Text: 'כרטיסי שותפים שנפתחים לפופאפים ממוקדים, בדיוק לפי הדרישה שלך.',
         step4Title: 'יצירת קשר', step4Text: 'עמוד נפרד עם טופס ופרטי התקשרות, מוכן בהמשך לחיבור אמיתי.'
+      },
+      services: {
+        title: 'הכיסא שלנו ליד השולחן.',
+        item1: 'ייעוץ וביצוע M&A בשווקים פרטיים וציבוריים',
+        item2: 'גיוס הון (פרטי וציבורי)',
+        item3: 'הנפקות ומיזוגים הפוכים',
+        item4: 'איתור משקיעים ורוכשים',
+        item5: 'הכנה לעסקה וייעוץ',
+        item6: 'ייעוץ לחברות ציבוריות'
       },
       partners: {
         title: 'שותפים\nבעלי החברה',
@@ -164,6 +188,7 @@ const translations = {
     footerNav.setAttribute('aria-label', tr('nav.footerAriaLabel'));
 
     document.querySelectorAll('[data-i18n]').forEach((node) => {
+      if (node.dataset.counted) return;
       const value = tr(node.getAttribute('data-i18n'));
       if (typeof value === 'string') {
         node.textContent = value;
@@ -369,10 +394,22 @@ const translations = {
     }
   });
 
+  function reAnimateStats() {
+    document.querySelectorAll('.stat-card__value').forEach(el => {
+      delete el.dataset.counted;
+      const parsed = parseStatText(el.textContent);
+      if (parsed) {
+        animateCount(el, parsed.num, parsed.prefix, parsed.suffix, 1600);
+        el.dataset.counted = 'true';
+      }
+    });
+  }
+
   langBtn.addEventListener('click', () => {
     appState.lang = appState.lang === 'he' ? 'en' : 'he';
     applyTranslations();
     renderPartners();
+    reAnimateStats();
     if (formStatus) {
       formStatus.textContent = '';
       formStatus.className = 'form-status';
@@ -407,6 +444,43 @@ const translations = {
     });
   }
 
+  function parseStatText(text) {
+    const match = text.trim().match(/^([^0-9]*)(\d+)(.*)$/);
+    if (!match) return null;
+    return { prefix: match[1], num: parseInt(match[2], 10), suffix: match[3] };
+  }
+
+  function animateCount(el, to, prefix, suffix, duration) {
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + Math.round(to * eased) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = prefix + to + suffix;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function initStatCounters() {
+    const statValues = document.querySelectorAll('.stat-card__value');
+    if (!statValues.length || !window.IntersectionObserver) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const parsed = parseStatText(el.textContent);
+        if (parsed) {
+          animateCount(el, parsed.num, parsed.prefix, parsed.suffix, 1600);
+          el.dataset.counted = 'true';
+        }
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+    statValues.forEach(el => observer.observe(el));
+  }
+
   applyTranslations();
   renderPartners();
   setPage('home');
+  initStatCounters();
