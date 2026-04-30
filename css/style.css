@@ -201,9 +201,15 @@
   .stat-card__label { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
 
   .services-component__box { padding: 40px 48px; }
-  .network-component__box { padding: 48px 56px; }
-  #network .component-head__title,
-  #network .component-head__subtitle { color: var(--accent); }
+  .network-component__box {
+    padding: 48px 56px;
+    background: radial-gradient(circle at 20% 20%, rgba(216,192,143,0.28), transparent 28%), linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)), linear-gradient(180deg, #171d29 0%, #0d121b 100%);
+  }
+  #network .component-head__title { color: var(--accent); }
+  #network .component-head__subtitle { color: var(--text); }
+  .network-rotating-text { transition: opacity 0.42s ease, transform 0.42s ease; }
+  .network-rotating-text.is-leaving { opacity: 0; transform: translateY(-10px); }
+  .network-rotating-text.is-entering { opacity: 0; transform: translateY(10px); }
   .services-component__title { margin: 0 0 32px; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.04em; line-height: 1.1; text-align: center; }
   .services-component__list { list-style: none; margin: 0; padding: 0; }
   .services-component__list li { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 9px 0; font-size: 16px; color: var(--muted); line-height: 1.5; }

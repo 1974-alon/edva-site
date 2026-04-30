@@ -163,6 +163,21 @@ const translations = {
     ]
   };
 
+  const networkSentences = {
+    en: [
+      'Long-standing relationships with investors, acquirers, and controlling shareholders across public and private markets.',
+      'Access to off-market opportunities unavailable through traditional channels.',
+      'A network built over 15 years of active deal-making in Israeli and global markets.',
+      'Direct lines to decision-makers on both the buy side and sell side.'
+    ],
+    he: [
+      'קשרים מושרשים עם משקיעים, רוכשים ובעלי שליטה בשווקים פרטיים וציבוריים.',
+      'גישה להזדמנויות שאינן בשוק הפתוח ואינן זמינות דרך ערוצים מסורתיים.',
+      'רשת שנבנתה על פני 15 שנות עסקאות פעילות בשוק הישראלי והגלובלי.',
+      'קו ישיר למקבלי החלטות משני צידי העסקה.'
+    ]
+  };
+
   const FORM_FIELD_IDS = ['name', 'email', 'message'];
 
   const appState = { lang: 'he', page: 'home' };
@@ -189,6 +204,10 @@ const translations = {
   const emailEl = document.getElementById('email');
   const messageEl = document.getElementById('message');
 
+  const networkTextEl = document.getElementById('networkRotatingText');
+  let _networkIndex = 0;
+  let _networkTimer = null;
+
   let _lastFocused = null;
 
   function tr(path) {
@@ -214,6 +233,23 @@ const translations = {
     }
   }
 
+  function startNetworkLoop() {
+    if (_networkTimer) clearInterval(_networkTimer);
+    _networkIndex = 0;
+    if (!networkTextEl) return;
+    networkTextEl.textContent = networkSentences[appState.lang][0];
+    _networkTimer = setInterval(() => {
+      networkTextEl.classList.add('is-leaving');
+      setTimeout(() => {
+        _networkIndex = (_networkIndex + 1) % networkSentences[appState.lang].length;
+        networkTextEl.textContent = networkSentences[appState.lang][_networkIndex];
+        networkTextEl.classList.remove('is-leaving');
+        networkTextEl.classList.add('is-entering');
+        requestAnimationFrame(() => requestAnimationFrame(() => networkTextEl.classList.remove('is-entering')));
+      }, 420);
+    }, 4000);
+  }
+
   function applyTranslations() {
     root.lang = appState.lang;
     root.dir = appState.lang === 'he' ? 'rtl' : 'ltr';
@@ -232,6 +268,7 @@ const translations = {
       }
     });
     updateMobileContactBtn();
+    startNetworkLoop();
   }
 
   function renderPartners() {
