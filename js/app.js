@@ -207,6 +207,7 @@ const translations = {
   const networkTextEl = document.getElementById('networkRotatingText');
   let _networkIndex = 0;
   let _networkTimer = null;
+  let _langTransitioning = false;
 
   let _lastFocused = null;
 
@@ -493,15 +494,44 @@ const translations = {
   }
 
   langBtn.addEventListener('click', () => {
-    appState.lang = appState.lang === 'he' ? 'en' : 'he';
-    applyTranslations();
-    renderPartners();
-    reAnimateStats();
-    if (formStatus) {
-      formStatus.textContent = '';
-      formStatus.className = 'form-status';
-    }
-    clearFormInvalid();
+    if (_langTransitioning) return;
+    _langTransitioning = true;
+    const shell = document.querySelector('.layout-shell');
+
+    // Phase 1: fade out + slide up
+    shell.style.transition = 'opacity 0.26s ease, transform 0.26s ease';
+    shell.style.opacity = '0';
+    shell.style.transform = 'translateY(-10px)';
+    shell.style.pointerEvents = 'none';
+
+    setTimeout(() => {
+      // Apply all changes while invisible
+      appState.lang = appState.lang === 'he' ? 'en' : 'he';
+      applyTranslations();
+      renderPartners();
+      reAnimateStats();
+      if (formStatus) { formStatus.textContent = ''; formStatus.className = 'form-status'; }
+      clearFormInvalid();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+
+      // Position at enter-from (below, invisible) with no transition
+      shell.style.transition = 'none';
+      shell.style.transform = 'translateY(10px)';
+      shell.offsetHeight; // force reflow
+
+      // Phase 2: fade in + slide to rest
+      shell.style.transition = 'opacity 0.36s ease, transform 0.36s ease';
+      shell.style.opacity = '1';
+      shell.style.transform = 'translateY(0)';
+
+      setTimeout(() => {
+        shell.style.transition = '';
+        shell.style.opacity = '';
+        shell.style.transform = '';
+        shell.style.pointerEvents = '';
+        _langTransitioning = false;
+      }, 380);
+    }, 280);
   });
 
   if (contactForm) {
