@@ -218,17 +218,34 @@ const translations = {
     if (!mobileContactBtn) return;
     const newText = appState.page === 'contact' ? tr('nav.home') : tr('nav.contactButton');
     const newRoute = appState.page === 'contact' ? 'home' : 'contact';
-    if (animate) {
-      mobileContactBtn.style.opacity = '0';
-      mobileContactBtn.style.transform = 'scale(0.9)';
+    const textSpan = mobileContactBtn.querySelector('.btn-text');
+    if (animate && textSpan) {
+      const oldWidth = mobileContactBtn.offsetWidth;
+      // Freeze width without triggering a transition (auto→px can't transition)
+      mobileContactBtn.style.transition = 'none';
+      mobileContactBtn.style.width = oldWidth + 'px';
+      mobileContactBtn.offsetWidth; // force reflow to commit the freeze
+      mobileContactBtn.style.transition = '';
+      textSpan.style.opacity = '0';
       setTimeout(() => {
-        mobileContactBtn.textContent = newText;
+        textSpan.textContent = newText;
         mobileContactBtn.setAttribute('data-route', newRoute);
-        mobileContactBtn.style.opacity = '1';
-        mobileContactBtn.style.transform = 'scale(1)';
-      }, 150);
+        // Measure new width without causing a visual paint
+        mobileContactBtn.style.transition = 'none';
+        mobileContactBtn.style.width = 'auto';
+        const newWidth = mobileContactBtn.offsetWidth;
+        mobileContactBtn.style.width = oldWidth + 'px';
+        mobileContactBtn.offsetWidth; // commit before re-enabling transitions
+        mobileContactBtn.style.transition = '';
+        requestAnimationFrame(() => {
+          mobileContactBtn.style.width = newWidth + 'px';
+          textSpan.style.opacity = '1';
+          setTimeout(() => { mobileContactBtn.style.width = ''; }, 460);
+        });
+      }, 380);
     } else {
-      mobileContactBtn.textContent = newText;
+      if (textSpan) textSpan.textContent = newText;
+      else mobileContactBtn.textContent = newText;
       mobileContactBtn.setAttribute('data-route', newRoute);
     }
   }

@@ -389,7 +389,8 @@
     .header-component__logo { margin: 0; }
     .header-component__lang { justify-self: end; min-width: 0; }
     .header-component__nav { display: none; }
-    .header-component__contact-mobile { display: inline-flex; grid-area: contact; transition: opacity 0.15s ease, transform 0.15s ease; }
+    .header-component__contact-mobile { display: inline-flex; align-items: center; justify-content: center; grid-area: contact; white-space: nowrap; transition: width 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .header-component__contact-mobile .btn-text { transition: opacity 0.38s ease; }
     .header-component__contact-mobile, .header-component__lang { min-height: 32px; padding: 0 13px; font-size: 13px; }
     .partner-card, .contact-component__card, .contact-component__form, .cta-component__box, .partner-modal__box, .hero-component__banner { border-radius: 22px; }
     .hero-component__banner {
