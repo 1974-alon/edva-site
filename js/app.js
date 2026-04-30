@@ -38,6 +38,10 @@ const translations = {
         item5: 'Transaction preparation and advisory',
         item6: 'Public company advisory'
       },
+      execution: {
+        title: 'Signed, sealed, delivered',
+        text: 'Hands-on across structuring, negotiation, and execution - embedded in the deal at every stage.'
+      },
       partners: {
         title: 'Partners\nCompany Owners',
         text: 'Two partner cards for now, with a structure that can easily expand later without changing the component logic.',
@@ -109,6 +113,10 @@ const translations = {
         item5: 'הכנה לעסקה וייעוץ',
         item6: 'ייעוץ לחברות ציבוריות'
       },
+      execution: {
+        title: 'חתום, סגור, מועבר',
+        text: 'מעורבים בפועל בכל שלב, ממבנה העסקה, דרך המשא ומתן, ועד לביצוע.'
+      },
       partners: {
         title: 'שותפים\nבעלי החברה',
         text: 'כרגע מוצגים שני שותפים בלבד, עם מבנה שמאפשר להרחיב בקלות בהמשך בלי לשנות את הלוגיקה של האזור.',
@@ -166,6 +174,7 @@ const translations = {
   const modalInitials = document.getElementById('modalInitials');
   const headerNav = document.querySelector('.header-component__nav');
   const footerNav = document.querySelector('.footer-component__nav');
+  const mobileContactBtn = document.querySelector('.header-component__contact-mobile');
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
   const nameEl = document.getElementById('name');
@@ -176,6 +185,25 @@ const translations = {
 
   function tr(path) {
     return path.split('.').reduce((acc, key) => acc && acc[key], translations[appState.lang]);
+  }
+
+  function updateMobileContactBtn(animate = false) {
+    if (!mobileContactBtn) return;
+    const newText = appState.page === 'contact' ? tr('nav.home') : tr('nav.contactButton');
+    const newRoute = appState.page === 'contact' ? 'home' : 'contact';
+    if (animate) {
+      mobileContactBtn.style.opacity = '0';
+      mobileContactBtn.style.transform = 'scale(0.9)';
+      setTimeout(() => {
+        mobileContactBtn.textContent = newText;
+        mobileContactBtn.setAttribute('data-route', newRoute);
+        mobileContactBtn.style.opacity = '1';
+        mobileContactBtn.style.transform = 'scale(1)';
+      }, 150);
+    } else {
+      mobileContactBtn.textContent = newText;
+      mobileContactBtn.setAttribute('data-route', newRoute);
+    }
   }
 
   function applyTranslations() {
@@ -195,6 +223,7 @@ const translations = {
         node.style.whiteSpace = value.includes('\n') ? 'pre-line' : '';
       }
     });
+    updateMobileContactBtn();
   }
 
   function renderPartners() {
@@ -323,6 +352,7 @@ const translations = {
         }, 150);
       }
     }
+    updateMobileContactBtn(true);
   }
 
   function attachRipple(target, event) {

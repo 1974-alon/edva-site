@@ -114,25 +114,23 @@
   .header-component__inner {
     min-height: 78px; display: grid; align-items: center; gap: 28px;
     grid-template-columns: minmax(170px,1fr) auto minmax(170px,1fr);
-    grid-template-areas: "lang nav brand";
+    grid-template-areas: "brand nav lang";
   }
-
-  html[dir="ltr"] .header-component__inner { grid-template-areas: "brand nav lang"; }
 
   .header-component__brand {
-    grid-area: brand; justify-self: end; display: inline-flex; align-items: center; gap: 12px;
+    grid-area: brand; justify-self: start; display: inline-flex; align-items: center; gap: 12px;
     font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap;
+    margin: 7px 0 0 0;
   }
-  html[dir="ltr"] .header-component__brand { justify-self: start; }
   .header-component__dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 18px rgba(216,192,143,0.35); }
+  .header-component__logo { height: 32px; width: auto; display: block; margin-inline-start: 5px; }
 
   .header-component__nav {
     grid-area: nav; display: flex; align-items: center; justify-content: center; gap: 24px; white-space: nowrap;
   }
   .header-component__nav a { color: var(--muted); transition: color var(--transition); }
   .header-component__nav a:hover { color: var(--text); }
-  .header-component__lang { grid-area: lang; justify-self: start; min-width: 108px; }
-  html[dir="ltr"] .header-component__lang { justify-self: end; }
+  .header-component__lang { grid-area: lang; justify-self: end; min-width: 108px; }
   .header-component__lang, .header-component__nav .ui-button { min-height: 42px; }
   .header-component__contact-mobile { display: none; }
 
@@ -378,9 +376,10 @@
     .header-component__inner { grid-template-columns: 1fr auto auto; gap: 10px; grid-template-areas: "brand contact lang"; }
     html[dir="rtl"] .header-component__inner, html[dir="ltr"] .header-component__inner { grid-template-areas: "brand contact lang"; }
     .header-component__brand { justify-self: start; }
+    .header-component__logo { margin: 0; }
     .header-component__lang { justify-self: end; min-width: 0; }
     .header-component__nav { display: none; }
-    .header-component__contact-mobile { display: inline-flex; grid-area: contact; }
+    .header-component__contact-mobile { display: inline-flex; grid-area: contact; transition: opacity 0.15s ease, transform 0.15s ease; }
     .header-component__contact-mobile, .header-component__lang { min-height: 32px; padding: 0 13px; font-size: 13px; }
     .partner-card, .contact-component__card, .contact-component__form, .cta-component__box, .partner-modal__box, .hero-component__banner { border-radius: 22px; }
     .hero-component__banner {
