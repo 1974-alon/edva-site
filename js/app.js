@@ -42,9 +42,13 @@ const translations = {
         title: 'Signed, sealed, delivered',
         text: 'Hands-on across structuring, negotiation, and execution - embedded in the deal at every stage.'
       },
+      network: {
+        title: 'Who we put in the room',
+        text: 'Long-standing relationships with investors, acquirers, and controlling shareholders across public and private markets, including access to off-market opportunities.'
+      },
       partners: {
-        title: 'Partners\nCompany Owners',
-        text: 'Two partner cards for now, with a structure that can easily expand later without changing the component logic.',
+        title: 'Who you exit with',
+        text: '',
         meta1: 'Founder profile', meta2: 'Extended popup content', meta3: 'Ready for future expansion'
       },
       cta: {
@@ -117,9 +121,13 @@ const translations = {
         title: 'חתום, סגור, מועבר',
         text: 'מעורבים בפועל בכל שלב, ממבנה העסקה, דרך המשא ומתן, ועד לביצוע.'
       },
+      network: {
+        title: 'מי אנחנו מכניסים לחדר',
+        text: 'קשרים מושרשים עם משקיעים, רוכשים ובעלי שליטה בשווקים פרטיים וציבוריים, כולל גישה להזדמנויות שאינן בשוק הפתוח.'
+      },
       partners: {
-        title: 'שותפים\nבעלי החברה',
-        text: 'כרגע מוצגים שני שותפים בלבד, עם מבנה שמאפשר להרחיב בקלות בהמשך בלי לשנות את הלוגיקה של האזור.',
+        title: 'עם מי יוצאים לאקזיט',
+        text: '',
         meta1: 'פרופיל מייסד', meta2: 'תוכן מורחב בפופאפ', meta3: 'מוכן להתרחבות בהמשך'
       },
       cta: {
@@ -146,12 +154,12 @@ const translations = {
 
   const partnersData = {
     en: [
-      { name: 'Ayal Brilant', role: 'Co Founder', initials: 'AB', excerpt: 'Leads the company vision, strategic direction and client facing relationships across the business.', bio: 'Ayal Brilant is presented here as one of the two company owners. This placeholder profile is designed to simulate a premium executive biography inside the popup experience. It gives space for a more personal leadership tone, while still keeping the layout formal and restrained. In the real site, this area can include professional background, key strengths, sector experience and selected achievements. It can also support a richer story about the company philosophy and long term vision. The current structure already allows for more text than the card itself, which helps preserve a clean homepage. Later on, this content can be pulled from a CMS or Angular data model. The popup is intentionally spacious, so the profile feels substantial and trustworthy.' },
-      { name: 'Dudu', role: 'Co Founder', initials: 'DU', excerpt: 'Focused on execution, commercial alignment and turning strategy into a clear, consistent process.', bio: 'Dudu is presented here as the second company owner, with a profile built to balance authority and warmth. The popup gives enough room for a fuller introduction, instead of forcing all of the information into the homepage card. This helps the section remain elegant and highly readable. In the live version, this text can describe leadership experience, operating style, market understanding and the value he brings to clients and partners. The current design is already structured for future growth, whether there are two profiles or more later on. It also keeps the visual system consistent between card view and modal view. This creates a premium and cohesive user experience. From an Angular perspective, this can later map cleanly to reusable partner components and modal data.' }
+      { name: 'Eyal Briliant', role: 'CEO and Partner, Edva. | BA in Business Administration', initials: 'EB', excerpt: 'Investor with extensive experience in company management, M&A, and investment banking, with a focus on startups. Applies a business-driven approach to company growth, transactions, and investment strategy.', bio: 'Investor with extensive experience in company management, M&A, and investment banking, with a focus on startups. Applies a business-driven approach to company growth, transactions, and investment strategy.' },
+      { name: 'David Cohen', role: 'Partner, Edva. | Attorney (LL.B.)', initials: 'DC', excerpt: '20+ years in financial markets, with deep expertise in the Israeli capital market as an investor, entrepreneur, and licensed attorney. Advises on M&A, IPOs, capital advisory, and reverse mergers across public and private companies.', bio: '20+ years in financial markets, with deep expertise in the Israeli capital market as an investor, entrepreneur, and licensed attorney. Advises on M&A, IPOs, capital advisory, and reverse mergers across public and private companies.' }
     ],
     he: [
-      { name: 'אייל ברילנט', role: 'מייסד שותף', initials: 'אב', excerpt: 'מוביל את חזון החברה, הכיוון האסטרטגי והקשר הישיר עם לקוחות ושותפים.', bio: 'אייל ברילנט מוצג כאן כאחד משני בעלי החברה. פרופיל הדוגמה הזה נועד לדמות ביוגרפיה ניהולית איכותית בתוך חוויית פופאפ יוקרתית ונקייה. הוא נותן מקום לטון אישי יותר, אבל עדיין שומר על שפה רשמית ומדויקת. באתר האמיתי אפשר יהיה להכניס כאן רקע מקצועי, תחומי מומחיות, ניסיון רלוונטי והישגים נבחרים. אפשר גם להרחיב על תפיסת העולם של החברה, על אופן העבודה ועל החזון לטווח הארוך. המבנה הנוכחי כבר מאפשר הרבה יותר תוכן מאשר בכרטיס עצמו, וכך שומר על עמוד בית נקי ומסודר. בהמשך ניתן יהיה למשוך את המידע הזה ממודל דאטה ב Angular או מ CMS. הפופאפ מרווח בכוונה, כדי שהפרופיל ירגיש משמעותי, אמין ובעל נוכחות.' },
-      { name: 'דודו כהן', role: 'מייסד שותף', initials: 'דו', excerpt: 'אחראי על ביצוע, יישור מסחרי והפיכת אסטרטגיה לתהליך ברור ועקבי.', bio: 'דודו מוצג כאן כבעל החברה השני, עם פרופיל שנבנה כדי לשלב בין סמכות לנגישות. הפופאפ נותן מקום להיכרות רחבה יותר, במקום לדחוס את כל המידע בתוך הכרטיס בעמוד הבית. כך היחידה נשארת אלגנטית, קריאה ונעימה יותר לעין. בגרסה החיה של האתר אפשר יהיה לפרט כאן על ניסיון ניהולי, סגנון עבודה, הבנת שוק והערך שהוא מביא ללקוחות ולשותפים. המבנה הנוכחי כבר מוכן להתרחבות עתידית, גם אם יתווספו עוד שותפים בהמשך. בנוסף, הוא שומר על שפה ויזואלית אחידה בין הכרטיס לבין הפופאפ. זה יוצר חוויית משתמש פרימיום ורציפה. מבחינת Angular, האזור הזה יוכל בעתיד להפוך בקלות לקומפוננטות חוזרות עם דאטה מסודר ומנוהל.' }
+      { name: 'אייל ברילנט', role: 'מנכ"ל ושותף BA | EDVA במנהל עסקים', initials: 'אב', excerpt: 'משקיע עם ניסיון נרחב בניהול חברות, M&A ובנקאות השקעות, עם דגש על סטארטאפים. מיישם גישה עסקית-מכוונת לצמיחת חברות, עסקאות ואסטרטגיית השקעות.', bio: 'משקיע עם ניסיון נרחב בניהול חברות, M&A ובנקאות השקעות, עם דגש על סטארטאפים. מיישם גישה עסקית-מכוונת לצמיחת חברות, עסקאות ואסטרטגיית השקעות.' },
+      { name: 'דוד כהן', role: 'שותף, EDVA | עורך דין (LL.B.)', initials: 'דכ', excerpt: 'מעל 20 שנה בשווקים פיננסיים, עם מומחיות עמוקה בשוק ההון הישראלי כמשקיע, יזם ועורך דין מורשה. מייעץ בתחום M&A, הנפקות, ייעוץ הון ומיזוגים הפוכים בחברות ציבוריות ופרטיות.', bio: 'מעל 20 שנה בשווקים פיננסיים, עם מומחיות עמוקה בשוק ההון הישראלי כמשקיע, יזם ועורך דין מורשה. מייעץ בתחום M&A, הנפקות, ייעוץ הון ומיזוגים הפוכים בחברות ציבוריות ופרטיות.' }
     ]
   };
 
@@ -273,11 +281,6 @@ const translations = {
     modalInitials.textContent = partner.initials;
 
     modalMeta.innerHTML = '';
-    [labels.meta1, labels.meta2, labels.meta3].forEach(label => {
-      const div = document.createElement('div');
-      div.textContent = `• ${label}`;
-      modalMeta.appendChild(div);
-    });
 
     _lastFocused = document.activeElement;
     modal.classList.add('is-open');
