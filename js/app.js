@@ -52,8 +52,8 @@ const translations = {
         meta1: 'Founder profile', meta2: 'Extended popup content', meta3: 'Ready for future expansion'
       },
       cta: {
-        title: 'A clean foundation for a premium site',
-        text: 'Placeholder copy today, real content tomorrow. The visual system is already built to support a polished bilingual advisory website.',
+        title: 'Let\'s talk exit',
+        text: 'For transaction-related opportunities and inquiries, reach out directly or leave us a message.',
         button: 'Open Contact Page'
       },
       contact: {
@@ -131,8 +131,8 @@ const translations = {
         meta1: 'פרופיל מייסד', meta2: 'תוכן מורחב בפופאפ', meta3: 'מוכן להתרחבות בהמשך'
       },
       cta: {
-        title: 'בסיס נקי לאתר פרימיום',
-        text: 'כרגע עם טקסטים זמניים, ובהמשך עם תוכן אמיתי. השפה הוויזואלית כבר מוכנה לאתר ייעוץ דו לשוני ומלוטש.',
+        title: 'בואו נדבר אקזיט',
+        text: 'להזדמנויות ופניות הקשורות לעסקאות, פנו אלינו ישירות או השאירו הודעה.',
         button: 'לפתיחת עמוד צור קשר'
       },
       contact: {
