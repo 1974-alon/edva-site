@@ -498,14 +498,12 @@ const translations = {
     _langTransitioning = true;
     const shell = document.querySelector('.layout-shell');
 
-    // Phase 1: fade out + slide up
-    shell.style.transition = 'opacity 0.26s ease, transform 0.26s ease';
+    // Phase 1: quick fade out
+    shell.style.transition = 'opacity 0.22s ease';
     shell.style.opacity = '0';
-    shell.style.transform = 'translateY(-10px)';
     shell.style.pointerEvents = 'none';
 
     setTimeout(() => {
-      // Apply all changes while invisible
       appState.lang = appState.lang === 'he' ? 'en' : 'he';
       applyTranslations();
       renderPartners();
@@ -514,24 +512,50 @@ const translations = {
       clearFormInvalid();
       window.scrollTo({ top: 0, behavior: 'instant' });
 
-      // Position at enter-from (below, invisible) with no transition
+      // Restore shell, sections will stagger in individually
       shell.style.transition = 'none';
-      shell.style.transform = 'translateY(10px)';
-      shell.offsetHeight; // force reflow
-
-      // Phase 2: fade in + slide to rest
-      shell.style.transition = 'opacity 0.36s ease, transform 0.36s ease';
       shell.style.opacity = '1';
-      shell.style.transform = 'translateY(0)';
 
+      const header = document.querySelector('.header-component');
+      const activePage = document.querySelector('.page.is-active');
+      const pageSections = activePage ? Array.from(activePage.children) : [];
+      const targets = [header, ...pageSections].filter(Boolean);
+
+      // Snap all to invisible + offset
+      targets.forEach(el => {
+        el.style.transition = 'none';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(-12px)';
+      });
+      shell.offsetHeight;
+
+      // Assign staggered transitions
+      const stagger = 65;
+      targets.forEach((el, i) => {
+        el.style.transition = `opacity 0.4s ease ${i * stagger}ms, transform 0.4s ease ${i * stagger}ms`;
+      });
+
+      // Trigger in next two frames for reliable paint
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        targets.forEach(el => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        });
+      }));
+
+      const guardMs = 400 + (targets.length - 1) * stagger + 80;
       setTimeout(() => {
+        targets.forEach(el => {
+          el.style.transition = '';
+          el.style.opacity = '';
+          el.style.transform = '';
+        });
         shell.style.transition = '';
         shell.style.opacity = '';
-        shell.style.transform = '';
         shell.style.pointerEvents = '';
         _langTransitioning = false;
-      }, 380);
-    }, 280);
+      }, guardMs);
+    }, 240);
   });
 
   if (contactForm) {
