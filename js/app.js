@@ -57,8 +57,8 @@ const translations = {
         button: 'Open Contact Page'
       },
       contact: {
-        title: 'Let\u2019s start with a focused conversation',
-        text: 'This page represents the dedicated contact screen you requested, including contact details and a simple premium form layout.',
+        title: 'Let\'s talk exit',
+        text: 'For transaction-related opportunities and inquiries, reach out directly or leave us a message.',
         detailsTitle: 'Contact details',
         detailsText: 'These details are placeholder content for layout demonstration and will be replaced later with real information.',
         emailTitle: 'Email', phoneTitle: 'Phone', locationTitle: 'Location', locationText: 'Israel, available globally',
@@ -136,8 +136,8 @@ const translations = {
         button: 'לפתיחת עמוד צור קשר'
       },
       contact: {
-        title: 'נתחיל משיחה ממוקדת',
-        text: 'העמוד הזה מייצג את מסך יצירת הקשר הנפרד שביקשת, עם פרטי התקשרות וטופס יוקרתי ופשוט.',
+        title: 'בואו נדבר אקזיט',
+        text: 'להזדמנויות ופניות הקשורות לעסקאות, פנו אלינו ישירות או השאירו הודעה.',
         detailsTitle: 'פרטי התקשרות',
         detailsText: 'הפרטים כאן הם תוכן זמני לצורך הדגמת המבנה, ובהמשך יוחלפו במידע אמיתי.',
         emailTitle: 'אימייל', phoneTitle: 'טלפון', locationTitle: 'מיקום', locationText: 'ישראל, זמין לעבודה גלובלית',
@@ -601,3 +601,17 @@ const translations = {
   renderPartners();
   setPage('home');
   initStatCounters();
+
+  const servicesGrid = document.getElementById('servicesGrid');
+  if (servicesGrid) {
+    const serviceItems = servicesGrid.querySelectorAll('.services-component__item');
+    serviceItems.forEach((item, i) => { item.style.transitionDelay = (180 + i * 110) + 'ms'; });
+    new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        serviceItems.forEach(item => item.classList.add('is-visible'));
+      } else if (entry.boundingClientRect.top > 0) {
+        serviceItems.forEach(item => item.classList.remove('is-visible'));
+      }
+    }, { threshold: 0.1 }).observe(servicesGrid);
+  }
