@@ -25,12 +25,12 @@ const translations = {
       },
       about: {
         title: 'Numbers, not promises',
-        card1Value: '$300M+', card1Label: 'in transaction value',
-        card2Value: '200+', card2Label: 'deals closed',
+        card1Value: '$400M+', card1Label: 'in transaction value',
+        card2Value: '100+', card2Label: 'deals closed',
         card3Value: '15+', card3Label: 'years in the market'
       },
       services: {
-        title: 'Where we sit at the table',
+        title: 'Transaction Expertise',
         item1: 'M&A advisory and execution across public and private markets',
         item2: 'Capital raising (private and public)',
         item3: 'IPOs and reverse mergers',
@@ -96,8 +96,8 @@ const translations = {
       },
       about: {
         title: 'מספרים, לא הבטחות',
-        card1Value: '$300M+', card1Label: 'בשווי עסקאות',
-        card2Value: '200+', card2Label: 'עסקאות שנסגרו',
+        card1Value: '$400M+', card1Label: 'בשווי עסקאות',
+        card2Value: '100+', card2Label: 'עסקאות שנסגרו',
         card3Value: '15+', card3Label: 'שנות ניסיון בשוק'
       },
       process: {
@@ -109,7 +109,7 @@ const translations = {
         step4Title: 'יצירת קשר', step4Text: 'עמוד נפרד עם טופס ופרטי התקשרות, מוכן בהמשך לחיבור אמיתי.'
       },
       services: {
-        title: 'הכיסא שלנו ליד השולחן',
+        title: 'מומחיות בעסקאות',
         item1: 'ייעוץ וביצוע M&A בשווקים פרטיים וציבוריים',
         item2: 'גיוס הון (פרטי וציבורי)',
         item3: 'הנפקות ומיזוגים הפוכים',
@@ -180,7 +180,7 @@ const translations = {
 
   const FORM_FIELD_IDS = ['name', 'email', 'message'];
 
-  const appState = { lang: 'he', page: 'home' };
+  const appState = { lang: 'en', page: 'home' };
   const root = document.documentElement;
   const langBtn = document.getElementById('langBtn');
   const partnersGrid = document.getElementById('partnersGrid');
