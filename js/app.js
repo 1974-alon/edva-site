@@ -8,7 +8,7 @@ const translations = {
       modal: { close: 'Close partner profile' },
       pageTitle: { home: 'EDVA — Independent Advisory', contact: 'EDVA — Contact' },
       hero: {
-        eyebrow: 'Independent Advisory',
+        eyebrow: 'Independent Boutique Advisory',
         title: 'All the way to your exit',
         text: 'M&A and capital raising for technology companies and investors, from strategy to exit.',
         primary: 'Start a Conversation',
@@ -21,7 +21,7 @@ const translations = {
       },
       valueProp: {
         title: 'Advice is cheap. Closing isn’t',
-        text: 'We advise and execute complex M&A transactions for technology companies, investors, and acquirers - staying hands-on through to exit.'
+        text: 'We advise and execute complex M&A and IPO transactions for technology companies, investors, and acquirers - staying hands-on through to exit.'
       },
       about: {
         title: 'Numbers, not promises',
@@ -50,6 +50,17 @@ const translations = {
         title: 'Who you exit with',
         text: '',
         meta1: 'Founder profile', meta2: 'Extended popup content', meta3: 'Ready for future expansion'
+      },
+      selectedTransactions: {
+        title: 'Selected Transactions',
+        item1: 'SaaS company acquisition',
+        item2: 'AI startup capital raise',
+        item3: 'Cross-border strategic M&A transaction',
+        item4: 'Reverse merger into public vehicle',
+        tag1: 'Acquisition',
+        tag2: 'Capital Raise',
+        tag3: 'M&A',
+        tag4: 'Reverse Merger'
       },
       cta: {
         title: 'Let\'s talk exit',
@@ -92,7 +103,7 @@ const translations = {
       },
       valueProp: {
         title: 'לייעץ זה קל, לסגור זה פחות',
-        text: 'אנחנו מייעצים ומוציאים לפועל עסקאות M&A מורכבות לחברות טכנולוגיה, למשקיעים ולרוכשים, ונשארים שותפים אקטיביים עד האקזיט.'
+        text: 'אנחנו מייעצים ומוציאים לפועל עסקאות M&A ו-IPO מורכבות לחברות טכנולוגיה, למשקיעים ולרוכשים, ונשארים שותפים אקטיביים עד האקזיט.'
       },
       about: {
         title: 'מספרים, לא הבטחות',
@@ -130,6 +141,17 @@ const translations = {
         text: '',
         meta1: 'פרופיל מייסד', meta2: 'תוכן מורחב בפופאפ', meta3: 'מוכן להתרחבות בהמשך'
       },
+      selectedTransactions: {
+        title: 'עסקאות נבחרות',
+        item1: 'רכישת חברת SaaS',
+        item2: 'גיוס הון לסטארטאפ AI',
+        item3: 'עסקת M&A חוצת גבולות',
+        item4: 'מיזוג הפוך לחברה ציבורית',
+        tag1: 'רכישה',
+        tag2: 'גיוס הון',
+        tag3: 'M&A',
+        tag4: 'מיזוג הפוך'
+      },
       cta: {
         title: 'בואו נדבר אקזיט',
         text: 'להזדמנויות ופניות הקשורות לעסקאות, פנו אלינו ישירות או השאירו הודעה.',
@@ -154,12 +176,12 @@ const translations = {
 
   const partnersData = {
     en: [
-      { name: 'Eyal Briliant', role: 'CEO and Partner, Edva. | BA in Business Administration', initials: 'EB', excerpt: 'Investor with extensive experience in company management, M&A, and investment banking, with a focus on startups. Applies a business-driven approach to company growth, transactions, and investment strategy.', bio: 'Investor with extensive experience in company management, M&A, and investment banking, with a focus on startups. Applies a business-driven approach to company growth, transactions, and investment strategy.' },
-      { name: 'David Cohen', role: 'Partner, Edva. | Attorney (LL.B.)', initials: 'DC', excerpt: '20+ years in financial markets, with deep expertise in the Israeli capital market as an investor, entrepreneur, and licensed attorney. Advises on M&A, IPOs, capital advisory, and reverse mergers across public and private companies.', bio: '20+ years in financial markets, with deep expertise in the Israeli capital market as an investor, entrepreneur, and licensed attorney. Advises on M&A, IPOs, capital advisory, and reverse mergers across public and private companies.' }
+      { name: 'Eyal Briliant', role: 'CEO and Partner, Edva. | BA in Business Administration', initials: 'EB', image: 'images/eyal.png', excerpt: 'Investor with extensive experience in company management, M&A, and investment banking, with a focus on startups. Applies a business-driven approach to company growth, transactions, and investment strategy.', bio: 'Investor with extensive experience in company management, M&A, and investment banking, with a focus on startups. Applies a business-driven approach to company growth, transactions, and investment strategy.' },
+      { name: 'David Cohen', role: 'Partner, Edva. | Attorney (LL.B.)', initials: 'DC', image: 'images/david.png', excerpt: '20+ years in financial markets, with deep expertise in the Israeli capital market as an investor, entrepreneur, and licensed attorney. Advises on M&A, IPOs, capital advisory, and reverse mergers across public and private companies.', bio: '20+ years in financial markets, with deep expertise in the Israeli capital market as an investor, entrepreneur, and licensed attorney. Advises on M&A, IPOs, capital advisory, and reverse mergers across public and private companies.' }
     ],
     he: [
-      { name: 'אייל ברילנט', role: 'מנכ"ל ושותף BA | EDVA במנהל עסקים', initials: 'אב', excerpt: 'משקיע עם ניסיון נרחב בניהול חברות, M&A ובנקאות השקעות, עם דגש על סטארטאפים. מיישם גישה עסקית-מכוונת לצמיחת חברות, עסקאות ואסטרטגיית השקעות.', bio: 'משקיע עם ניסיון נרחב בניהול חברות, M&A ובנקאות השקעות, עם דגש על סטארטאפים. מיישם גישה עסקית-מכוונת לצמיחת חברות, עסקאות ואסטרטגיית השקעות.' },
-      { name: 'דוד כהן', role: 'שותף, EDVA | עורך דין (LL.B.)', initials: 'דכ', excerpt: 'מעל 20 שנה בשווקים פיננסיים, עם מומחיות עמוקה בשוק ההון הישראלי כמשקיע, יזם ועורך דין מורשה. מייעץ בתחום M&A, הנפקות, ייעוץ הון ומיזוגים הפוכים בחברות ציבוריות ופרטיות.', bio: 'מעל 20 שנה בשווקים פיננסיים, עם מומחיות עמוקה בשוק ההון הישראלי כמשקיע, יזם ועורך דין מורשה. מייעץ בתחום M&A, הנפקות, ייעוץ הון ומיזוגים הפוכים בחברות ציבוריות ופרטיות.' }
+      { name: 'אייל ברילנט', role: 'מנכ"ל ושותף BA | EDVA במנהל עסקים', initials: 'אב', image: 'images/eyal.png', excerpt: 'משקיע עם ניסיון נרחב בניהול חברות, M&A ובנקאות השקעות, עם דגש על סטארטאפים. מיישם גישה עסקית-מכוונת לצמיחת חברות, עסקאות ואסטרטגיית השקעות.', bio: 'משקיע עם ניסיון נרחב בניהול חברות, M&A ובנקאות השקעות, עם דגש על סטארטאפים. מיישם גישה עסקית-מכוונת לצמיחת חברות, עסקאות ואסטרטגיית השקעות.' },
+      { name: 'דוד כהן', role: 'שותף, EDVA | עורך דין (LL.B.)', initials: 'דכ', image: 'images/david.png', excerpt: 'מעל 20 שנה בשווקים פיננסיים, עם מומחיות עמוקה בשוק ההון הישראלי כמשקיע, יזם ועורך דין מורשה. מייעץ בתחום M&A, הנפקות, ייעוץ הון ומיזוגים הפוכים בחברות ציבוריות ופרטיות.', bio: 'מעל 20 שנה בשווקים פיננסיים, עם מומחיות עמוקה בשוק ההון הישראלי כמשקיע, יזם ועורך דין מורשה. מייעץ בתחום M&A, הנפקות, ייעוץ הון ומיזוגים הפוכים בחברות ציבוריות ופרטיות.' }
     ]
   };
 
@@ -316,10 +338,18 @@ const translations = {
 
       const imageDiv = document.createElement('div');
       imageDiv.className = 'partner-card__image';
-      const initialsSpan = document.createElement('span');
-      initialsSpan.className = 'partner-card__initials';
-      initialsSpan.textContent = partner.initials;
-      imageDiv.appendChild(initialsSpan);
+      if (partner.image) {
+        const img = document.createElement('img');
+        img.src = partner.image;
+        img.alt = '';
+        img.className = 'partner-card__photo';
+        imageDiv.appendChild(img);
+      } else {
+        const initialsSpan = document.createElement('span');
+        initialsSpan.className = 'partner-card__initials';
+        initialsSpan.textContent = partner.initials;
+        imageDiv.appendChild(initialsSpan);
+      }
 
       article.appendChild(infoDiv);
       article.appendChild(imageDiv);
@@ -333,7 +363,21 @@ const translations = {
     modalRole.textContent = partner.role;
     modalTitle.textContent = partner.name;
     modalText.textContent = partner.bio;
-    modalInitials.textContent = partner.initials;
+
+    const modalImageDiv = modal.querySelector('.partner-modal__image');
+    const existingPhoto = modalImageDiv.querySelector('.partner-modal__photo');
+    if (existingPhoto) existingPhoto.remove();
+    if (partner.image) {
+      const img = document.createElement('img');
+      img.src = partner.image;
+      img.alt = '';
+      img.className = 'partner-modal__photo';
+      modalInitials.style.display = 'none';
+      modalImageDiv.appendChild(img);
+    } else {
+      modalInitials.style.display = '';
+      modalInitials.textContent = partner.initials;
+    }
 
     modalMeta.innerHTML = '';
 
@@ -626,6 +670,20 @@ const translations = {
   setPage('home');
   initStatCounters();
 
+  const transactionsGrid = document.getElementById('transactionsGrid');
+  if (transactionsGrid) {
+    const transItems = transactionsGrid.querySelectorAll('.transactions-component__item');
+    transItems.forEach((item, i) => { item.style.transitionDelay = (80 + i * 90) + 'ms'; });
+    new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        transItems.forEach(item => item.classList.add('is-visible'));
+      } else if (entry.boundingClientRect.top > 0) {
+        transItems.forEach(item => item.classList.remove('is-visible'));
+      }
+    }, { threshold: 0.1 }).observe(transactionsGrid);
+  }
+
   const servicesGrid = document.getElementById('servicesGrid');
   if (servicesGrid) {
     const serviceItems = servicesGrid.querySelectorAll('.services-component__item');
@@ -639,3 +697,15 @@ const translations = {
       }
     }, { threshold: 0.1 }).observe(servicesGrid);
   }
+
+  document.querySelectorAll('.component-section:not(#hero)').forEach(section => {
+    section.classList.add('scroll-reveal');
+    new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        section.classList.add('is-visible');
+      } else if (entry.boundingClientRect.top > 0) {
+        section.classList.remove('is-visible');
+      }
+    }, { threshold: 0.08 }).observe(section);
+  });
