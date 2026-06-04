@@ -78,9 +78,11 @@ const translations = {
         name: 'Full name', email: 'Email address', company: 'Company', message: 'How can we help?',
         submit: 'Send inquiry',
         successMsg: 'Thank you! Your inquiry was received. We will be in touch soon.',
-        errorName: 'Full name is required', errorEmail: 'A valid email address is required', errorMessage: 'Message is required'
+        sending: 'Sending...',
+        errorName: 'Full name is required', errorEmail: 'A valid email address is required', errorMessage: 'Message is required',
+        errorSend: 'Something went wrong. Please try again or email us directly.'
       },
-      footer: { copy: 'EDVA, premium advisory site concept', home: 'Home', partners: 'Partners', contact: 'Contact' }
+      footer: { copy: '© 2025 EDVA Partners. All rights reserved.', credit: 'Written & designed by', home: 'Home', partners: 'Partners', contact: 'Contact' }
     },
     he: {
       skipNav: 'דלג לתוכן הראשי',
@@ -168,9 +170,11 @@ const translations = {
         name: 'שם מלא', email: 'אימייל', company: 'חברה', message: 'איך נוכל לעזור?',
         submit: 'שלח פנייה',
         successMsg: 'תודה! פנייתך התקבלה. נחזור אליך בהקדם.',
-        errorName: 'שם מלא נדרש', errorEmail: 'כתובת אימייל תקינה נדרשת', errorMessage: 'הודעה נדרשת'
+        sending: 'שולח...',
+        errorName: 'שם מלא נדרש', errorEmail: 'כתובת אימייל תקינה נדרשת', errorMessage: 'הודעה נדרשת',
+        errorSend: 'אירעה שגיאה. אנא נסה שוב או שלח אלינו אימייל ישירות.'
       },
-      footer: { copy: 'EDVA, קונספט לאתר ייעוץ פרימיום', home: 'בית', partners: 'שותפים', contact: 'צור קשר' }
+      footer: { copy: '© 2025 EDVA Partners. כל הזכויות שמורות.', credit: 'נכתב ועוצב ע״י', home: 'בית', partners: 'שותפים', contact: 'צור קשר' }
     }
   };
 
@@ -223,7 +227,10 @@ const translations = {
   const formStatus = document.getElementById('formStatus');
   const nameEl = document.getElementById('name');
   const emailEl = document.getElementById('email');
+  const companyEl = document.getElementById('company');
   const messageEl = document.getElementById('message');
+
+  emailjs.init('2hODahWEHEWsu2emP');
 
   const networkTextEl = document.getElementById('networkRotatingText');
   let _networkIndex = 0;
@@ -651,10 +658,25 @@ const translations = {
 
       const submitBtn = contactForm.querySelector('[type="submit"]');
       submitBtn.disabled = true;
-      formStatus.className = 'form-status form-status--success';
-      formStatus.textContent = tr('contact.successMsg');
-      contactForm.reset();
-      setTimeout(() => { submitBtn.disabled = false; }, 4000);
+      formStatus.className = 'form-status';
+      formStatus.textContent = tr('contact.sending');
+
+      emailjs.send('service_v4om6y9', 'template_pc38c6q', {
+        from_name: nameEl.value.trim(),
+        from_email: emailEl.value.trim(),
+        email: emailEl.value.trim(),
+        company: companyEl ? companyEl.value.trim() : '',
+        message: messageEl.value.trim(),
+      }).then(() => {
+        formStatus.className = 'form-status form-status--success';
+        formStatus.textContent = tr('contact.successMsg');
+        contactForm.reset();
+        setTimeout(() => { submitBtn.disabled = false; }, 4000);
+      }).catch(() => {
+        formStatus.className = 'form-status form-status--error';
+        formStatus.textContent = tr('contact.errorSend');
+        submitBtn.disabled = false;
+      });
     });
 
     [nameEl, emailEl, messageEl].forEach(el => {
