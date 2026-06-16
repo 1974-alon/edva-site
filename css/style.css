@@ -171,6 +171,13 @@
     z-index: 1;
     max-width: 760px;
   }
+  .hero-component__content {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-component__text {
+    margin-inline: auto;
+  }
   .hero-component__eyebrow {
     margin: 0 0 18px;
     color: var(--accent);
@@ -186,7 +193,7 @@
     white-space: pre-line;
   }
   .hero-component__text {
-    margin: 20px 0 0;
+    margin: 20px auto 0 auto;
     max-width: 640px;
     color: rgba(245,247,251,0.82);
     font-size: 18px;
